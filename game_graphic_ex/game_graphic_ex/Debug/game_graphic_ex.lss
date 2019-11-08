@@ -1,0 +1,3660 @@
+
+game_graphic_ex.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00001750  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000016dc  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000404  00800100  00800100  00001750  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00001750  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001780  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000148  00000000  00000000  000017bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00005da5  00000000  00000000  00001904  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000ae2  00000000  00000000  000076a9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001816  00000000  00000000  0000818b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000004a0  00000000  00000000  000099a4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005fa  00000000  00000000  00009e44  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000021e0  00000000  00000000  0000a43e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000118  00000000  00000000  0000c61e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	61 c0       	rjmp	.+194    	; 0xc8 <__bad_interrupt>
+       6:	00 00       	nop
+       8:	5f c0       	rjmp	.+190    	; 0xc8 <__bad_interrupt>
+       a:	00 00       	nop
+       c:	5d c0       	rjmp	.+186    	; 0xc8 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	5b c0       	rjmp	.+182    	; 0xc8 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	59 c0       	rjmp	.+178    	; 0xc8 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	57 c0       	rjmp	.+174    	; 0xc8 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	55 c0       	rjmp	.+170    	; 0xc8 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	53 c0       	rjmp	.+166    	; 0xc8 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	51 c0       	rjmp	.+162    	; 0xc8 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	4f c0       	rjmp	.+158    	; 0xc8 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	4d c0       	rjmp	.+154    	; 0xc8 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	4b c0       	rjmp	.+150    	; 0xc8 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	49 c0       	rjmp	.+146    	; 0xc8 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	47 c0       	rjmp	.+142    	; 0xc8 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	45 c0       	rjmp	.+138    	; 0xc8 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	43 c0       	rjmp	.+134    	; 0xc8 <__bad_interrupt>
+      42:	00 00       	nop
+      44:	41 c0       	rjmp	.+130    	; 0xc8 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	3f c0       	rjmp	.+126    	; 0xc8 <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	3d c0       	rjmp	.+122    	; 0xc8 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	3b c0       	rjmp	.+118    	; 0xc8 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	39 c0       	rjmp	.+114    	; 0xc8 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	37 c0       	rjmp	.+110    	; 0xc8 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	35 c0       	rjmp	.+106    	; 0xc8 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	33 c0       	rjmp	.+102    	; 0xc8 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	31 c0       	rjmp	.+98     	; 0xc8 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	2f c0       	rjmp	.+94     	; 0xc8 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	2d c0       	rjmp	.+90     	; 0xc8 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	2b c0       	rjmp	.+86     	; 0xc8 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	29 c0       	rjmp	.+82     	; 0xc8 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	27 c0       	rjmp	.+78     	; 0xc8 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	25 c0       	rjmp	.+74     	; 0xc8 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	23 c0       	rjmp	.+70     	; 0xc8 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	21 c0       	rjmp	.+66     	; 0xc8 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	1f c0       	rjmp	.+62     	; 0xc8 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	11 e0       	ldi	r17, 0x01	; 1
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	ec ed       	ldi	r30, 0xDC	; 220
+      a0:	f6 e1       	ldi	r31, 0x16	; 22
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a0 30       	cpi	r26, 0x00	; 0
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+      b2:	25 e0       	ldi	r18, 0x05	; 5
+      b4:	a0 e0       	ldi	r26, 0x00	; 0
+      b6:	b1 e0       	ldi	r27, 0x01	; 1
+      b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+      ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+      bc:	a4 30       	cpi	r26, 0x04	; 4
+      be:	b2 07       	cpc	r27, r18
+      c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+      c2:	16 d0       	rcall	.+44     	; 0xf0 <main>
+      c4:	0c 94 6c 0b 	jmp	0x16d8	; 0x16d8 <_exit>
+
+000000c8 <__bad_interrupt>:
+      c8:	9b cf       	rjmp	.-202    	; 0x0 <__vectors>
+
+000000ca <Port_init>:
+#include "_main.h"
+#include "_bitmap.h"
+
+void Port_init(void) 						// Ìè¨Ìä∏ Ï¥àÍ∏∞Ìôî Íµ¨Î¨∏ÏûÖÎãàÎã§.
+{
+	PORTA = 0x00; 	DDRA = 0xFF;			// PORTA Ï∂úÎ†• LOW ,ÌïÄÏùò Ï∂úÎ†• ÏÑ§Ï†ï
+      ca:	1b ba       	out	0x1b, r1	; 27
+      cc:	8f ef       	ldi	r24, 0xFF	; 255
+      ce:	8a bb       	out	0x1a, r24	; 26
+	PORTB = 0xFE; 	DDRB = 0xFF;			// PORTB Ï∂úÎ†• LOW ,ÌïÄÏùò Ï∂úÎ†• ÏÑ§Ï†ï
+      d0:	9e ef       	ldi	r25, 0xFE	; 254
+      d2:	98 bb       	out	0x18, r25	; 24
+      d4:	87 bb       	out	0x17, r24	; 23
+	PORTC = 0x00; 	DDRC = 0xF0;			// PORTC ÏÉÅÏúÑ 4bit ÏûÖÎ†•, ÌïòÏúÑ 4bit Ï∂úÎ†•
+      d6:	15 ba       	out	0x15, r1	; 21
+      d8:	90 ef       	ldi	r25, 0xF0	; 240
+      da:	94 bb       	out	0x14, r25	; 20
+	PORTD = 0x80;	DDRD = 0x80;		// ÌïÄÏùò ÏûÖÏ∂úÎ†• ÏÑ§Ï†ï
+      dc:	90 e8       	ldi	r25, 0x80	; 128
+      de:	92 bb       	out	0x12, r25	; 18
+      e0:	91 bb       	out	0x11, r25	; 17
+	PORTE = 0x00; 	DDRE = 0xFF;			// PORTE Ï∂úÎ†• LOW ,ÌïÄÏùò Ï∂úÎ†• ÏÑ§Ï†ï
+      e2:	13 b8       	out	0x03, r1	; 3
+      e4:	82 b9       	out	0x02, r24	; 2
+	PORTF = 0x00; 	DDRF = 0x00;			// PORTE Ï∂úÎ†• LOW ,ÌïÄÏùò Ï∂úÎ†• ÏÑ§Ï†ï
+      e6:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+      ea:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+      ee:	08 95       	ret
+
+000000f0 <main>:
+}
+
+int main(void)
+{
+	Port_init();
+      f0:	ec df       	rcall	.-40     	; 0xca <Port_init>
+	lcd_init();
+      f2:	0e 94 e1 0a 	call	0x15c2	; 0x15c2 <lcd_init>
+	lcd_clear();
+      f6:	0e 94 cf 0a 	call	0x159e	; 0x159e <lcd_clear>
+	ScreenBuffer_clear();
+      fa:	0e 94 5a 0b 	call	0x16b4	; 0x16b4 <ScreenBuffer_clear>
+    /* Replace with your application code */
+    while (1) 
+    {
+		setHouse();
+		setweapon();
+      fe:	ec d2       	rcall	.+1496   	; 0x6d8 <setHouse>
+		hpline();
+     100:	08 d0       	rcall	.+16     	; 0x112 <setweapon>
+     102:	c9 d2       	rcall	.+1426   	; 0x696 <hpline>
+		setplayer();
+     104:	f8 d7       	rcall	.+4080   	; 0x10f6 <setplayer>
+     106:	64 e1       	ldi	r22, 0x14	; 20
+		home_Enemy_Character(10, 20);
+     108:	70 e0       	ldi	r23, 0x00	; 0
+     10a:	8a e0       	ldi	r24, 0x0A	; 10
+     10c:	90 e0       	ldi	r25, 0x00	; 0
+     10e:	c8 d0       	rcall	.+400    	; 0x2a0 <home_Enemy_Character>
+     110:	f6 cf       	rjmp	.-20     	; 0xfe <main+0xe>
+
+00000112 <setweapon>:
+     112:	cf 93       	push	r28
+#include "_main.h"
+#include "_bitmap.h"
+
+
+void setweapon(void)				//ªÁøÎ¡ﬂ¿Œ π´±‚ µµ∆Æ
+{
+     114:	df 93       	push	r29
+	for(int i = 110; i<113; i++){
+		GLCD_Dot(61,i);
+     116:	6e e6       	ldi	r22, 0x6E	; 110
+     118:	70 e0       	ldi	r23, 0x00	; 0
+     11a:	8d e3       	ldi	r24, 0x3D	; 61
+     11c:	90 e0       	ldi	r25, 0x00	; 0
+     11e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     122:	6f e6       	ldi	r22, 0x6F	; 111
+     124:	70 e0       	ldi	r23, 0x00	; 0
+     126:	8d e3       	ldi	r24, 0x3D	; 61
+     128:	90 e0       	ldi	r25, 0x00	; 0
+     12a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     12e:	60 e7       	ldi	r22, 0x70	; 112
+     130:	70 e0       	ldi	r23, 0x00	; 0
+     132:	8d e3       	ldi	r24, 0x3D	; 61
+     134:	90 e0       	ldi	r25, 0x00	; 0
+     136:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 110; i<111; i++){
+		GLCD_Dot(60,i);
+     13a:	6e e6       	ldi	r22, 0x6E	; 110
+     13c:	70 e0       	ldi	r23, 0x00	; 0
+     13e:	8c e3       	ldi	r24, 0x3C	; 60
+     140:	90 e0       	ldi	r25, 0x00	; 0
+     142:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 112; i<113; i++){
+		GLCD_Dot(60,i);
+     146:	60 e7       	ldi	r22, 0x70	; 112
+     148:	70 e0       	ldi	r23, 0x00	; 0
+     14a:	8c e3       	ldi	r24, 0x3C	; 60
+     14c:	90 e0       	ldi	r25, 0x00	; 0
+     14e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 108; i<111; i++){
+		GLCD_Dot(59,i);
+     152:	6c e6       	ldi	r22, 0x6C	; 108
+     154:	70 e0       	ldi	r23, 0x00	; 0
+     156:	8b e3       	ldi	r24, 0x3B	; 59
+     158:	90 e0       	ldi	r25, 0x00	; 0
+     15a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     15e:	6d e6       	ldi	r22, 0x6D	; 109
+     160:	70 e0       	ldi	r23, 0x00	; 0
+     162:	8b e3       	ldi	r24, 0x3B	; 59
+     164:	90 e0       	ldi	r25, 0x00	; 0
+     166:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     16a:	6e e6       	ldi	r22, 0x6E	; 110
+     16c:	70 e0       	ldi	r23, 0x00	; 0
+     16e:	8b e3       	ldi	r24, 0x3B	; 59
+     170:	90 e0       	ldi	r25, 0x00	; 0
+     172:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 112; i<113; i++){
+		GLCD_Dot(59,i);
+     176:	60 e7       	ldi	r22, 0x70	; 112
+     178:	70 e0       	ldi	r23, 0x00	; 0
+     17a:	8b e3       	ldi	r24, 0x3B	; 59
+     17c:	90 e0       	ldi	r25, 0x00	; 0
+     17e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 107; i<108; i++){
+		GLCD_Dot(58,i);
+     182:	6b e6       	ldi	r22, 0x6B	; 107
+     184:	70 e0       	ldi	r23, 0x00	; 0
+     186:	8a e3       	ldi	r24, 0x3A	; 58
+     188:	90 e0       	ldi	r25, 0x00	; 0
+     18a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 109; i<111; i++){
+		GLCD_Dot(58,i);
+     18e:	6d e6       	ldi	r22, 0x6D	; 109
+     190:	70 e0       	ldi	r23, 0x00	; 0
+     192:	8a e3       	ldi	r24, 0x3A	; 58
+     194:	90 e0       	ldi	r25, 0x00	; 0
+     196:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     19a:	6e e6       	ldi	r22, 0x6E	; 110
+     19c:	70 e0       	ldi	r23, 0x00	; 0
+     19e:	8a e3       	ldi	r24, 0x3A	; 58
+     1a0:	90 e0       	ldi	r25, 0x00	; 0
+     1a2:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 112; i<114; i++){
+		GLCD_Dot(58,i);
+     1a6:	60 e7       	ldi	r22, 0x70	; 112
+     1a8:	70 e0       	ldi	r23, 0x00	; 0
+     1aa:	8a e3       	ldi	r24, 0x3A	; 58
+     1ac:	90 e0       	ldi	r25, 0x00	; 0
+     1ae:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     1b2:	61 e7       	ldi	r22, 0x71	; 113
+     1b4:	70 e0       	ldi	r23, 0x00	; 0
+     1b6:	8a e3       	ldi	r24, 0x3A	; 58
+     1b8:	90 e0       	ldi	r25, 0x00	; 0
+     1ba:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     1be:	c5 e6       	ldi	r28, 0x65	; 101
+     1c0:	d0 e0       	ldi	r29, 0x00	; 0
+	}
+	for(int i = 101; i<111; i++){
+		GLCD_Dot(57,i);
+     1c2:	be 01       	movw	r22, r28
+     1c4:	89 e3       	ldi	r24, 0x39	; 57
+     1c6:	90 e0       	ldi	r25, 0x00	; 0
+     1c8:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(58,i);
+	}
+	for(int i = 112; i<114; i++){
+		GLCD_Dot(58,i);
+	}
+	for(int i = 101; i<111; i++){
+     1cc:	21 96       	adiw	r28, 0x01	; 1
+     1ce:	cf 36       	cpi	r28, 0x6F	; 111
+     1d0:	d1 05       	cpc	r29, r1
+     1d2:	b9 f7       	brne	.-18     	; 0x1c2 <setweapon+0xb0>
+		GLCD_Dot(57,i);
+	}
+	for(int i = 112; i<114; i++){
+		GLCD_Dot(57,i);
+     1d4:	60 e7       	ldi	r22, 0x70	; 112
+     1d6:	70 e0       	ldi	r23, 0x00	; 0
+     1d8:	89 e3       	ldi	r24, 0x39	; 57
+     1da:	90 e0       	ldi	r25, 0x00	; 0
+     1dc:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     1e0:	61 e7       	ldi	r22, 0x71	; 113
+     1e2:	70 e0       	ldi	r23, 0x00	; 0
+     1e4:	89 e3       	ldi	r24, 0x39	; 57
+     1e6:	90 e0       	ldi	r25, 0x00	; 0
+     1e8:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     1ec:	c5 e6       	ldi	r28, 0x65	; 101
+     1ee:	d0 e0       	ldi	r29, 0x00	; 0
+	}
+	for(int i = 101; i<109; i++){
+		GLCD_Dot(56,i);
+     1f0:	be 01       	movw	r22, r28
+     1f2:	88 e3       	ldi	r24, 0x38	; 56
+     1f4:	90 e0       	ldi	r25, 0x00	; 0
+     1f6:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(57,i);
+	}
+	for(int i = 112; i<114; i++){
+		GLCD_Dot(57,i);
+	}
+	for(int i = 101; i<109; i++){
+     1fa:	21 96       	adiw	r28, 0x01	; 1
+     1fc:	cd 36       	cpi	r28, 0x6D	; 109
+     1fe:	d1 05       	cpc	r29, r1
+     200:	b9 f7       	brne	.-18     	; 0x1f0 <setweapon+0xde>
+     202:	3c c0       	rjmp	.+120    	; 0x27c <setweapon+0x16a>
+	}
+	for(int i = 101; i<102; i++){
+		GLCD_Dot(55,i);
+	}
+	for(int i = 108; i<114; i++){
+		GLCD_Dot(55,i);
+     204:	be 01       	movw	r22, r28
+     206:	87 e3       	ldi	r24, 0x37	; 55
+     208:	90 e0       	ldi	r25, 0x00	; 0
+     20a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(56,i);
+	}
+	for(int i = 101; i<102; i++){
+		GLCD_Dot(55,i);
+	}
+	for(int i = 108; i<114; i++){
+     20e:	21 96       	adiw	r28, 0x01	; 1
+     210:	c2 37       	cpi	r28, 0x72	; 114
+     212:	d1 05       	cpc	r29, r1
+     214:	b9 f7       	brne	.-18     	; 0x204 <setweapon+0xf2>
+		GLCD_Dot(55,i);
+	}
+	for(int i = 109; i<112; i++){
+		GLCD_Dot(54,i);
+     216:	6d e6       	ldi	r22, 0x6D	; 109
+     218:	70 e0       	ldi	r23, 0x00	; 0
+     21a:	86 e3       	ldi	r24, 0x36	; 54
+     21c:	90 e0       	ldi	r25, 0x00	; 0
+     21e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     222:	6e e6       	ldi	r22, 0x6E	; 110
+     224:	70 e0       	ldi	r23, 0x00	; 0
+     226:	86 e3       	ldi	r24, 0x36	; 54
+     228:	90 e0       	ldi	r25, 0x00	; 0
+     22a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     22e:	6f e6       	ldi	r22, 0x6F	; 111
+     230:	70 e0       	ldi	r23, 0x00	; 0
+     232:	86 e3       	ldi	r24, 0x36	; 54
+     234:	90 e0       	ldi	r25, 0x00	; 0
+     236:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     23a:	cf e3       	ldi	r28, 0x3F	; 63
+     23c:	d0 e0       	ldi	r29, 0x00	; 0
+	}
+	//√— ∏«¸ ≥°
+	for(int i =63 ; i>51; i--){
+		GLCD_Dot(i,99);
+     23e:	63 e6       	ldi	r22, 0x63	; 99
+     240:	70 e0       	ldi	r23, 0x00	; 0
+     242:	ce 01       	movw	r24, r28
+     244:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(i,127);
+     248:	6f e7       	ldi	r22, 0x7F	; 127
+     24a:	70 e0       	ldi	r23, 0x00	; 0
+     24c:	ce 01       	movw	r24, r28
+     24e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 109; i<112; i++){
+		GLCD_Dot(54,i);
+	}
+	//√— ∏«¸ ≥°
+	for(int i =63 ; i>51; i--){
+     252:	21 97       	sbiw	r28, 0x01	; 1
+     254:	c3 33       	cpi	r28, 0x33	; 51
+     256:	d1 05       	cpc	r29, r1
+     258:	91 f7       	brne	.-28     	; 0x23e <setweapon+0x12c>
+     25a:	c3 e6       	ldi	r28, 0x63	; 99
+     25c:	d0 e0       	ldi	r29, 0x00	; 0
+		GLCD_Dot(i,99);
+		GLCD_Dot(i,127);
+	}
+	for(int i =99 ; i<128; i++){
+		GLCD_Dot(52,i);
+     25e:	be 01       	movw	r22, r28
+     260:	84 e3       	ldi	r24, 0x34	; 52
+     262:	90 e0       	ldi	r25, 0x00	; 0
+     264:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(63,i);
+     268:	be 01       	movw	r22, r28
+     26a:	8f e3       	ldi	r24, 0x3F	; 63
+     26c:	90 e0       	ldi	r25, 0x00	; 0
+     26e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	//√— ∏«¸ ≥°
+	for(int i =63 ; i>51; i--){
+		GLCD_Dot(i,99);
+		GLCD_Dot(i,127);
+	}
+	for(int i =99 ; i<128; i++){
+     272:	21 96       	adiw	r28, 0x01	; 1
+     274:	c0 38       	cpi	r28, 0x80	; 128
+     276:	d1 05       	cpc	r29, r1
+     278:	91 f7       	brne	.-28     	; 0x25e <setweapon+0x14c>
+     27a:	0f c0       	rjmp	.+30     	; 0x29a <setweapon+0x188>
+	}
+	for(int i = 101; i<109; i++){
+		GLCD_Dot(56,i);
+	}
+	for(int i = 113; i<114; i++){
+		GLCD_Dot(56,i);
+     27c:	61 e7       	ldi	r22, 0x71	; 113
+     27e:	70 e0       	ldi	r23, 0x00	; 0
+     280:	88 e3       	ldi	r24, 0x38	; 56
+     282:	90 e0       	ldi	r25, 0x00	; 0
+     284:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	}
+	for(int i = 101; i<102; i++){
+		GLCD_Dot(55,i);
+     288:	65 e6       	ldi	r22, 0x65	; 101
+     28a:	70 e0       	ldi	r23, 0x00	; 0
+     28c:	87 e3       	ldi	r24, 0x37	; 55
+     28e:	90 e0       	ldi	r25, 0x00	; 0
+     290:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     294:	cc e6       	ldi	r28, 0x6C	; 108
+     296:	d0 e0       	ldi	r29, 0x00	; 0
+     298:	b5 cf       	rjmp	.-150    	; 0x204 <setweapon+0xf2>
+	}
+	for(int i =99 ; i<128; i++){
+		GLCD_Dot(52,i);
+		GLCD_Dot(63,i);
+	}
+}
+     29a:	df 91       	pop	r29
+     29c:	cf 91       	pop	r28
+     29e:	08 95       	ret
+
+000002a0 <home_Enemy_Character>:
+void home_Enemy_Character(unsigned int x, unsigned int y) // ¡ˆ∫ÿ ¿ß ¿˚ ƒ≥∏Ø≈Õ µµ∆Æ
+{
+     2a0:	2f 92       	push	r2
+     2a2:	3f 92       	push	r3
+     2a4:	4f 92       	push	r4
+     2a6:	5f 92       	push	r5
+     2a8:	6f 92       	push	r6
+     2aa:	7f 92       	push	r7
+     2ac:	8f 92       	push	r8
+     2ae:	9f 92       	push	r9
+     2b0:	af 92       	push	r10
+     2b2:	bf 92       	push	r11
+     2b4:	cf 92       	push	r12
+     2b6:	df 92       	push	r13
+     2b8:	ef 92       	push	r14
+     2ba:	ff 92       	push	r15
+     2bc:	0f 93       	push	r16
+     2be:	1f 93       	push	r17
+     2c0:	cf 93       	push	r28
+     2c2:	df 93       	push	r29
+     2c4:	cd b7       	in	r28, 0x3d	; 61
+     2c6:	de b7       	in	r29, 0x3e	; 62
+     2c8:	64 97       	sbiw	r28, 0x14	; 20
+     2ca:	0f b6       	in	r0, 0x3f	; 63
+     2cc:	f8 94       	cli
+     2ce:	de bf       	out	0x3e, r29	; 62
+     2d0:	0f be       	out	0x3f, r0	; 63
+     2d2:	cd bf       	out	0x3d, r28	; 61
+     2d4:	9c 8b       	std	Y+20, r25	; 0x14
+     2d6:	8b 8b       	std	Y+19, r24	; 0x13
+     2d8:	8b 01       	movw	r16, r22
+	GLCD_Dot(x-4,y-2);
+     2da:	2b 01       	movw	r4, r22
+     2dc:	82 e0       	ldi	r24, 0x02	; 2
+     2de:	48 1a       	sub	r4, r24
+     2e0:	51 08       	sbc	r5, r1
+     2e2:	eb 88       	ldd	r14, Y+19	; 0x13
+     2e4:	fc 88       	ldd	r15, Y+20	; 0x14
+     2e6:	94 e0       	ldi	r25, 0x04	; 4
+     2e8:	e9 1a       	sub	r14, r25
+     2ea:	f1 08       	sbc	r15, r1
+     2ec:	b2 01       	movw	r22, r4
+     2ee:	c7 01       	movw	r24, r14
+     2f0:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-4,y-1);
+     2f4:	48 01       	movw	r8, r16
+     2f6:	81 e0       	ldi	r24, 0x01	; 1
+     2f8:	88 1a       	sub	r8, r24
+     2fa:	91 08       	sbc	r9, r1
+     2fc:	b4 01       	movw	r22, r8
+     2fe:	c7 01       	movw	r24, r14
+     300:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-4,y);
+     304:	b8 01       	movw	r22, r16
+     306:	c7 01       	movw	r24, r14
+     308:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-4,y+5);
+     30c:	c8 01       	movw	r24, r16
+     30e:	05 96       	adiw	r24, 0x05	; 5
+     310:	9a 83       	std	Y+2, r25	; 0x02
+     312:	89 83       	std	Y+1, r24	; 0x01
+     314:	bc 01       	movw	r22, r24
+     316:	c7 01       	movw	r24, r14
+     318:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-4,y+6);
+     31c:	38 01       	movw	r6, r16
+     31e:	96 e0       	ldi	r25, 0x06	; 6
+     320:	69 0e       	add	r6, r25
+     322:	71 1c       	adc	r7, r1
+     324:	b3 01       	movw	r22, r6
+     326:	c7 01       	movw	r24, r14
+     328:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-4,y+7);
+     32c:	18 01       	movw	r2, r16
+     32e:	87 e0       	ldi	r24, 0x07	; 7
+     330:	28 0e       	add	r2, r24
+     332:	31 1c       	adc	r3, r1
+     334:	b1 01       	movw	r22, r2
+     336:	c7 01       	movw	r24, r14
+     338:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(x-5,y-1);
+     33c:	eb 88       	ldd	r14, Y+19	; 0x13
+     33e:	fc 88       	ldd	r15, Y+20	; 0x14
+     340:	95 e0       	ldi	r25, 0x05	; 5
+     342:	e9 1a       	sub	r14, r25
+     344:	f1 08       	sbc	r15, r1
+     346:	b4 01       	movw	r22, r8
+     348:	c7 01       	movw	r24, r14
+     34a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y);
+     34e:	b8 01       	movw	r22, r16
+     350:	c7 01       	movw	r24, r14
+     352:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+1);
+     356:	c8 01       	movw	r24, r16
+     358:	01 96       	adiw	r24, 0x01	; 1
+     35a:	9c 83       	std	Y+4, r25	; 0x04
+     35c:	8b 83       	std	Y+3, r24	; 0x03
+     35e:	bc 01       	movw	r22, r24
+     360:	c7 01       	movw	r24, r14
+     362:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+2);
+     366:	c8 01       	movw	r24, r16
+     368:	02 96       	adiw	r24, 0x02	; 2
+     36a:	9a 87       	std	Y+10, r25	; 0x0a
+     36c:	89 87       	std	Y+9, r24	; 0x09
+     36e:	bc 01       	movw	r22, r24
+     370:	c7 01       	movw	r24, r14
+     372:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+3);
+     376:	c8 01       	movw	r24, r16
+     378:	03 96       	adiw	r24, 0x03	; 3
+     37a:	9c 87       	std	Y+12, r25	; 0x0c
+     37c:	8b 87       	std	Y+11, r24	; 0x0b
+     37e:	bc 01       	movw	r22, r24
+     380:	c7 01       	movw	r24, r14
+     382:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+4);
+     386:	c8 01       	movw	r24, r16
+     388:	04 96       	adiw	r24, 0x04	; 4
+     38a:	9e 83       	std	Y+6, r25	; 0x06
+     38c:	8d 83       	std	Y+5, r24	; 0x05
+     38e:	bc 01       	movw	r22, r24
+     390:	c7 01       	movw	r24, r14
+     392:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+5);
+     396:	69 81       	ldd	r22, Y+1	; 0x01
+     398:	7a 81       	ldd	r23, Y+2	; 0x02
+     39a:	c7 01       	movw	r24, r14
+     39c:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-5,y+6);
+     3a0:	b3 01       	movw	r22, r6
+     3a2:	c7 01       	movw	r24, r14
+     3a4:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+
+	GLCD_Dot(x-6,y-2);
+     3a8:	eb 88       	ldd	r14, Y+19	; 0x13
+     3aa:	fc 88       	ldd	r15, Y+20	; 0x14
+     3ac:	96 e0       	ldi	r25, 0x06	; 6
+     3ae:	e9 1a       	sub	r14, r25
+     3b0:	f1 08       	sbc	r15, r1
+     3b2:	b2 01       	movw	r22, r4
+     3b4:	c7 01       	movw	r24, r14
+     3b6:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y-1);
+     3ba:	b4 01       	movw	r22, r8
+     3bc:	c7 01       	movw	r24, r14
+     3be:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+1);
+     3c2:	6b 81       	ldd	r22, Y+3	; 0x03
+     3c4:	7c 81       	ldd	r23, Y+4	; 0x04
+     3c6:	c7 01       	movw	r24, r14
+     3c8:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+4);
+     3cc:	6d 81       	ldd	r22, Y+5	; 0x05
+     3ce:	7e 81       	ldd	r23, Y+6	; 0x06
+     3d0:	c7 01       	movw	r24, r14
+     3d2:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+5);
+     3d6:	69 81       	ldd	r22, Y+1	; 0x01
+     3d8:	7a 81       	ldd	r23, Y+2	; 0x02
+     3da:	c7 01       	movw	r24, r14
+     3dc:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+6);
+     3e0:	b3 01       	movw	r22, r6
+     3e2:	c7 01       	movw	r24, r14
+     3e4:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+7);
+     3e8:	b1 01       	movw	r22, r2
+     3ea:	c7 01       	movw	r24, r14
+     3ec:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+8);
+     3f0:	c8 01       	movw	r24, r16
+     3f2:	08 96       	adiw	r24, 0x08	; 8
+     3f4:	98 87       	std	Y+8, r25	; 0x08
+     3f6:	8f 83       	std	Y+7, r24	; 0x07
+     3f8:	bc 01       	movw	r22, r24
+     3fa:	c7 01       	movw	r24, r14
+     3fc:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-6,y+9);
+     400:	c8 01       	movw	r24, r16
+     402:	09 96       	adiw	r24, 0x09	; 9
+     404:	9a 8b       	std	Y+18, r25	; 0x12
+     406:	89 8b       	std	Y+17, r24	; 0x11
+     408:	bc 01       	movw	r22, r24
+     40a:	c7 01       	movw	r24, r14
+     40c:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(x-7,y-3);
+     410:	c8 01       	movw	r24, r16
+     412:	03 97       	sbiw	r24, 0x03	; 3
+     414:	9e 87       	std	Y+14, r25	; 0x0e
+     416:	8d 87       	std	Y+13, r24	; 0x0d
+     418:	eb 88       	ldd	r14, Y+19	; 0x13
+     41a:	fc 88       	ldd	r15, Y+20	; 0x14
+     41c:	97 e0       	ldi	r25, 0x07	; 7
+     41e:	e9 1a       	sub	r14, r25
+     420:	f1 08       	sbc	r15, r1
+     422:	6d 85       	ldd	r22, Y+13	; 0x0d
+     424:	7e 85       	ldd	r23, Y+14	; 0x0e
+     426:	c7 01       	movw	r24, r14
+     428:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y-2);
+     42c:	b2 01       	movw	r22, r4
+     42e:	c7 01       	movw	r24, r14
+     430:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+1);
+     434:	6b 81       	ldd	r22, Y+3	; 0x03
+     436:	7c 81       	ldd	r23, Y+4	; 0x04
+     438:	c7 01       	movw	r24, r14
+     43a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+2);
+     43e:	69 85       	ldd	r22, Y+9	; 0x09
+     440:	7a 85       	ldd	r23, Y+10	; 0x0a
+     442:	c7 01       	movw	r24, r14
+     444:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+3);
+     448:	6b 85       	ldd	r22, Y+11	; 0x0b
+     44a:	7c 85       	ldd	r23, Y+12	; 0x0c
+     44c:	c7 01       	movw	r24, r14
+     44e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+4);
+     452:	6d 81       	ldd	r22, Y+5	; 0x05
+     454:	7e 81       	ldd	r23, Y+6	; 0x06
+     456:	c7 01       	movw	r24, r14
+     458:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+7);
+     45c:	b1 01       	movw	r22, r2
+     45e:	c7 01       	movw	r24, r14
+     460:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-7,y+8);
+     464:	6f 81       	ldd	r22, Y+7	; 0x07
+     466:	78 85       	ldd	r23, Y+8	; 0x08
+     468:	c7 01       	movw	r24, r14
+     46a:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+
+	GLCD_Dot(x-8,y-3);
+     46e:	eb 88       	ldd	r14, Y+19	; 0x13
+     470:	fc 88       	ldd	r15, Y+20	; 0x14
+     472:	88 e0       	ldi	r24, 0x08	; 8
+     474:	e8 1a       	sub	r14, r24
+     476:	f1 08       	sbc	r15, r1
+     478:	6d 85       	ldd	r22, Y+13	; 0x0d
+     47a:	7e 85       	ldd	r23, Y+14	; 0x0e
+     47c:	c7 01       	movw	r24, r14
+     47e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-8,y-2);
+     482:	b2 01       	movw	r22, r4
+     484:	c7 01       	movw	r24, r14
+     486:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-8,y+7);
+     48a:	b1 01       	movw	r22, r2
+     48c:	c7 01       	movw	r24, r14
+     48e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-8,y+8);
+     492:	6f 81       	ldd	r22, Y+7	; 0x07
+     494:	78 85       	ldd	r23, Y+8	; 0x08
+     496:	c7 01       	movw	r24, r14
+     498:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+
+	GLCD_Dot(x-9,y-3);
+     49c:	eb 88       	ldd	r14, Y+19	; 0x13
+     49e:	fc 88       	ldd	r15, Y+20	; 0x14
+     4a0:	99 e0       	ldi	r25, 0x09	; 9
+     4a2:	e9 1a       	sub	r14, r25
+     4a4:	f1 08       	sbc	r15, r1
+     4a6:	6d 85       	ldd	r22, Y+13	; 0x0d
+     4a8:	7e 85       	ldd	r23, Y+14	; 0x0e
+     4aa:	c7 01       	movw	r24, r14
+     4ac:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y-2);
+     4b0:	b2 01       	movw	r22, r4
+     4b2:	c7 01       	movw	r24, r14
+     4b4:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y);
+     4b8:	b8 01       	movw	r22, r16
+     4ba:	c7 01       	movw	r24, r14
+     4bc:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y+1);
+     4c0:	6b 81       	ldd	r22, Y+3	; 0x03
+     4c2:	7c 81       	ldd	r23, Y+4	; 0x04
+     4c4:	c7 01       	movw	r24, r14
+     4c6:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y+4);
+     4ca:	6d 81       	ldd	r22, Y+5	; 0x05
+     4cc:	7e 81       	ldd	r23, Y+6	; 0x06
+     4ce:	c7 01       	movw	r24, r14
+     4d0:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y+5);
+     4d4:	69 81       	ldd	r22, Y+1	; 0x01
+     4d6:	7a 81       	ldd	r23, Y+2	; 0x02
+     4d8:	c7 01       	movw	r24, r14
+     4da:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y+7);
+     4de:	b1 01       	movw	r22, r2
+     4e0:	c7 01       	movw	r24, r14
+     4e2:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-9,y+8);
+     4e6:	6f 81       	ldd	r22, Y+7	; 0x07
+     4e8:	78 85       	ldd	r23, Y+8	; 0x08
+     4ea:	c7 01       	movw	r24, r14
+     4ec:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     4f0:	c8 01       	movw	r24, r16
+     4f2:	05 97       	sbiw	r24, 0x05	; 5
+     4f4:	98 8b       	std	Y+16, r25	; 0x10
+     4f6:	8f 87       	std	Y+15, r24	; 0x0f
+     4f8:	68 01       	movw	r12, r16
+     4fa:	9b e0       	ldi	r25, 0x0B	; 11
+     4fc:	c9 0e       	add	r12, r25
+     4fe:	d1 1c       	adc	r13, r1
+     500:	af 84       	ldd	r10, Y+15	; 0x0f
+     502:	b8 88       	ldd	r11, Y+16	; 0x10
+
+	int i;
+	for(i=-5; i<11; i++)
+	{
+		GLCD_Dot(x-10,y+i);
+     504:	eb 88       	ldd	r14, Y+19	; 0x13
+     506:	fc 88       	ldd	r15, Y+20	; 0x14
+     508:	8a e0       	ldi	r24, 0x0A	; 10
+     50a:	e8 1a       	sub	r14, r24
+     50c:	f1 08       	sbc	r15, r1
+     50e:	b5 01       	movw	r22, r10
+     510:	c7 01       	movw	r24, r14
+     512:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+     516:	9f ef       	ldi	r25, 0xFF	; 255
+     518:	a9 1a       	sub	r10, r25
+     51a:	b9 0a       	sbc	r11, r25
+	GLCD_Dot(x-9,y+5);
+	GLCD_Dot(x-9,y+7);
+	GLCD_Dot(x-9,y+8);
+
+	int i;
+	for(i=-5; i<11; i++)
+     51c:	ac 14       	cp	r10, r12
+     51e:	bd 04       	cpc	r11, r13
+     520:	b1 f7       	brne	.-20     	; 0x50e <__LOCK_REGION_LENGTH__+0x10e>
+     522:	8b 89       	ldd	r24, Y+19	; 0x13
+     524:	9c 89       	ldd	r25, Y+20	; 0x14
+	{
+		GLCD_Dot(x-10,y+i);
+	}
+	GLCD_Dot(x-11,y-5);
+     526:	7c 01       	movw	r14, r24
+     528:	9b e0       	ldi	r25, 0x0B	; 11
+     52a:	e9 1a       	sub	r14, r25
+     52c:	f1 08       	sbc	r15, r1
+     52e:	6f 85       	ldd	r22, Y+15	; 0x0f
+     530:	78 89       	ldd	r23, Y+16	; 0x10
+     532:	c7 01       	movw	r24, r14
+     534:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-11,y+10);
+     538:	68 01       	movw	r12, r16
+     53a:	8a e0       	ldi	r24, 0x0A	; 10
+     53c:	c8 0e       	add	r12, r24
+     53e:	d1 1c       	adc	r13, r1
+     540:	b6 01       	movw	r22, r12
+     542:	c7 01       	movw	r24, r14
+     544:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(x-12,y-5);
+     548:	eb 88       	ldd	r14, Y+19	; 0x13
+     54a:	fc 88       	ldd	r15, Y+20	; 0x14
+     54c:	9c e0       	ldi	r25, 0x0C	; 12
+     54e:	e9 1a       	sub	r14, r25
+     550:	f1 08       	sbc	r15, r1
+     552:	6f 85       	ldd	r22, Y+15	; 0x0f
+     554:	78 89       	ldd	r23, Y+16	; 0x10
+     556:	c7 01       	movw	r24, r14
+     558:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y-4);
+     55c:	b8 01       	movw	r22, r16
+     55e:	64 50       	subi	r22, 0x04	; 4
+     560:	71 09       	sbc	r23, r1
+     562:	c7 01       	movw	r24, r14
+     564:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y-3);
+     568:	6d 85       	ldd	r22, Y+13	; 0x0d
+     56a:	7e 85       	ldd	r23, Y+14	; 0x0e
+     56c:	c7 01       	movw	r24, r14
+     56e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y-2);
+     572:	b2 01       	movw	r22, r4
+     574:	c7 01       	movw	r24, r14
+     576:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y-1);
+     57a:	b4 01       	movw	r22, r8
+     57c:	c7 01       	movw	r24, r14
+     57e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y+6);
+     582:	b3 01       	movw	r22, r6
+     584:	c7 01       	movw	r24, r14
+     586:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y+7);
+     58a:	b1 01       	movw	r22, r2
+     58c:	c7 01       	movw	r24, r14
+     58e:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y+8);
+     592:	6f 81       	ldd	r22, Y+7	; 0x07
+     594:	78 85       	ldd	r23, Y+8	; 0x08
+     596:	c7 01       	movw	r24, r14
+     598:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y+9);
+     59c:	69 89       	ldd	r22, Y+17	; 0x11
+     59e:	7a 89       	ldd	r23, Y+18	; 0x12
+     5a0:	c7 01       	movw	r24, r14
+     5a2:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-12,y+10);
+     5a6:	b6 01       	movw	r22, r12
+     5a8:	c7 01       	movw	r24, r14
+     5aa:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(x-13,y-1);
+     5ae:	eb 88       	ldd	r14, Y+19	; 0x13
+     5b0:	fc 88       	ldd	r15, Y+20	; 0x14
+     5b2:	8d e0       	ldi	r24, 0x0D	; 13
+     5b4:	e8 1a       	sub	r14, r24
+     5b6:	f1 08       	sbc	r15, r1
+     5b8:	b4 01       	movw	r22, r8
+     5ba:	c7 01       	movw	r24, r14
+     5bc:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y);
+     5c0:	b8 01       	movw	r22, r16
+     5c2:	c7 01       	movw	r24, r14
+     5c4:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+1);
+     5c8:	6b 81       	ldd	r22, Y+3	; 0x03
+     5ca:	7c 81       	ldd	r23, Y+4	; 0x04
+     5cc:	c7 01       	movw	r24, r14
+     5ce:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+2);
+     5d2:	69 85       	ldd	r22, Y+9	; 0x09
+     5d4:	7a 85       	ldd	r23, Y+10	; 0x0a
+     5d6:	c7 01       	movw	r24, r14
+     5d8:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+3);
+     5dc:	6b 85       	ldd	r22, Y+11	; 0x0b
+     5de:	7c 85       	ldd	r23, Y+12	; 0x0c
+     5e0:	c7 01       	movw	r24, r14
+     5e2:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+4);
+     5e6:	6d 81       	ldd	r22, Y+5	; 0x05
+     5e8:	7e 81       	ldd	r23, Y+6	; 0x06
+     5ea:	c7 01       	movw	r24, r14
+     5ec:	0e 94 f8 0a 	call	0x15f0	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+5);
+     5f0:	69 81       	ldd	r22, Y+1	; 0x01
+     5f2:	7a 81       	ldd	r23, Y+2	; 0x02
+     5f4:	c7 01       	movw	r24, r14
+     5f6:	fc d7       	rcall	.+4088   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-13,y+6);
+     5f8:	b3 01       	movw	r22, r6
+     5fa:	c7 01       	movw	r24, r14
+     5fc:	f9 d7       	rcall	.+4082   	; 0x15f0 <GLCD_Dot>
+
+	GLCD_Dot(x-14,y-1);
+     5fe:	eb 88       	ldd	r14, Y+19	; 0x13
+     600:	fc 88       	ldd	r15, Y+20	; 0x14
+     602:	9e e0       	ldi	r25, 0x0E	; 14
+     604:	e9 1a       	sub	r14, r25
+     606:	f1 08       	sbc	r15, r1
+     608:	b4 01       	movw	r22, r8
+     60a:	c7 01       	movw	r24, r14
+     60c:	f1 d7       	rcall	.+4066   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-14,y+6);
+     60e:	b3 01       	movw	r22, r6
+     610:	c7 01       	movw	r24, r14
+     612:	ee d7       	rcall	.+4060   	; 0x15f0 <GLCD_Dot>
+
+	GLCD_Dot(x-15,y-1);
+     614:	8b 89       	ldd	r24, Y+19	; 0x13
+     616:	9c 89       	ldd	r25, Y+20	; 0x14
+     618:	0f 97       	sbiw	r24, 0x0f	; 15
+     61a:	98 87       	std	Y+8, r25	; 0x08
+     61c:	8f 83       	std	Y+7, r24	; 0x07
+     61e:	b4 01       	movw	r22, r8
+     620:	e7 d7       	rcall	.+4046   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-15,y);
+     622:	b8 01       	movw	r22, r16
+     624:	8f 81       	ldd	r24, Y+7	; 0x07
+     626:	98 85       	ldd	r25, Y+8	; 0x08
+     628:	e3 d7       	rcall	.+4038   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-15,y+1);
+     62a:	6b 81       	ldd	r22, Y+3	; 0x03
+     62c:	7c 81       	ldd	r23, Y+4	; 0x04
+     62e:	8f 81       	ldd	r24, Y+7	; 0x07
+     630:	98 85       	ldd	r25, Y+8	; 0x08
+     632:	de d7       	rcall	.+4028   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-15,y+2);
+     634:	69 85       	ldd	r22, Y+9	; 0x09
+     636:	7a 85       	ldd	r23, Y+10	; 0x0a
+     638:	8f 81       	ldd	r24, Y+7	; 0x07
+     63a:	98 85       	ldd	r25, Y+8	; 0x08
+     63c:	d9 d7       	rcall	.+4018   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(x-15,y+3);
+     63e:	6b 85       	ldd	r22, Y+11	; 0x0b
+     640:	7c 85       	ldd	r23, Y+12	; 0x0c
+     642:	8f 81       	ldd	r24, Y+7	; 0x07
+     644:	98 85       	ldd	r25, Y+8	; 0x08
+     646:	d4 d7       	rcall	.+4008   	; 0x15f0 <GLCD_Dot>
+     648:	6d 81       	ldd	r22, Y+5	; 0x05
+	GLCD_Dot(x-15,y+4);
+     64a:	7e 81       	ldd	r23, Y+6	; 0x06
+     64c:	8f 81       	ldd	r24, Y+7	; 0x07
+     64e:	98 85       	ldd	r25, Y+8	; 0x08
+     650:	cf d7       	rcall	.+3998   	; 0x15f0 <GLCD_Dot>
+     652:	69 81       	ldd	r22, Y+1	; 0x01
+	GLCD_Dot(x-15,y+5);
+     654:	7a 81       	ldd	r23, Y+2	; 0x02
+     656:	8f 81       	ldd	r24, Y+7	; 0x07
+     658:	98 85       	ldd	r25, Y+8	; 0x08
+     65a:	ca d7       	rcall	.+3988   	; 0x15f0 <GLCD_Dot>
+     65c:	b3 01       	movw	r22, r6
+	GLCD_Dot(x-15,y+6);
+     65e:	8f 81       	ldd	r24, Y+7	; 0x07
+     660:	98 85       	ldd	r25, Y+8	; 0x08
+     662:	c6 d7       	rcall	.+3980   	; 0x15f0 <GLCD_Dot>
+     664:	64 96       	adiw	r28, 0x14	; 20
+
+}
+     666:	0f b6       	in	r0, 0x3f	; 63
+     668:	f8 94       	cli
+     66a:	de bf       	out	0x3e, r29	; 62
+     66c:	0f be       	out	0x3f, r0	; 63
+     66e:	cd bf       	out	0x3d, r28	; 61
+     670:	df 91       	pop	r29
+     672:	cf 91       	pop	r28
+     674:	1f 91       	pop	r17
+     676:	0f 91       	pop	r16
+     678:	ff 90       	pop	r15
+     67a:	ef 90       	pop	r14
+     67c:	df 90       	pop	r13
+     67e:	cf 90       	pop	r12
+     680:	bf 90       	pop	r11
+     682:	af 90       	pop	r10
+     684:	9f 90       	pop	r9
+     686:	8f 90       	pop	r8
+     688:	7f 90       	pop	r7
+     68a:	6f 90       	pop	r6
+     68c:	5f 90       	pop	r5
+     68e:	4f 90       	pop	r4
+     690:	3f 90       	pop	r3
+     692:	2f 90       	pop	r2
+     694:	08 95       	ret
+
+00000696 <hpline>:
+     696:	cf 93       	push	r28
+
+void hpline(void)					//hpµµ∆Æ ø‹∫Œ ∂Û¿Œ µµ∆Æ
+{
+     698:	df 93       	push	r29
+	for(int i = 0; i<34; i++){
+     69a:	c0 e0       	ldi	r28, 0x00	; 0
+     69c:	d0 e0       	ldi	r29, 0x00	; 0
+		GLCD_Dot(63,i);
+     69e:	be 01       	movw	r22, r28
+     6a0:	8f e3       	ldi	r24, 0x3F	; 63
+     6a2:	90 e0       	ldi	r25, 0x00	; 0
+     6a4:	a5 d7       	rcall	.+3914   	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(51,i);
+     6a6:	be 01       	movw	r22, r28
+     6a8:	83 e3       	ldi	r24, 0x33	; 51
+     6aa:	90 e0       	ldi	r25, 0x00	; 0
+     6ac:	a1 d7       	rcall	.+3906   	; 0x15f0 <GLCD_Dot>
+
+}
+
+void hpline(void)					//hpµµ∆Æ ø‹∫Œ ∂Û¿Œ µµ∆Æ
+{
+	for(int i = 0; i<34; i++){
+     6ae:	21 96       	adiw	r28, 0x01	; 1
+     6b0:	c2 32       	cpi	r28, 0x22	; 34
+     6b2:	d1 05       	cpc	r29, r1
+     6b4:	a1 f7       	brne	.-24     	; 0x69e <hpline+0x8>
+     6b6:	cf e3       	ldi	r28, 0x3F	; 63
+     6b8:	d0 e0       	ldi	r29, 0x00	; 0
+		GLCD_Dot(63,i);
+		GLCD_Dot(51,i);
+	}
+	for(int i = 63; i>51; i--){
+		GLCD_Dot(i,0);
+     6ba:	60 e0       	ldi	r22, 0x00	; 0
+     6bc:	70 e0       	ldi	r23, 0x00	; 0
+     6be:	ce 01       	movw	r24, r28
+     6c0:	97 d7       	rcall	.+3886   	; 0x15f0 <GLCD_Dot>
+		GLCD_Dot(i,33);
+     6c2:	61 e2       	ldi	r22, 0x21	; 33
+     6c4:	70 e0       	ldi	r23, 0x00	; 0
+     6c6:	ce 01       	movw	r24, r28
+     6c8:	93 d7       	rcall	.+3878   	; 0x15f0 <GLCD_Dot>
+{
+	for(int i = 0; i<34; i++){
+		GLCD_Dot(63,i);
+		GLCD_Dot(51,i);
+	}
+	for(int i = 63; i>51; i--){
+     6ca:	21 97       	sbiw	r28, 0x01	; 1
+     6cc:	c3 33       	cpi	r28, 0x33	; 51
+     6ce:	d1 05       	cpc	r29, r1
+     6d0:	a1 f7       	brne	.-24     	; 0x6ba <hpline+0x24>
+		GLCD_Dot(i,0);
+		GLCD_Dot(i,33);
+	}
+}
+     6d2:	df 91       	pop	r29
+     6d4:	cf 91       	pop	r28
+     6d6:	08 95       	ret
+
+000006d8 <setHouse>:
+
+void setHouse(void)					//πË∞Ê - ¡˝ µµ∆Æ
+{
+     6d8:	cf 93       	push	r28
+     6da:	df 93       	push	r29
+	int i;
+	for(i=8; i<40; i++)
+     6dc:	c8 e0       	ldi	r28, 0x08	; 8
+     6de:	d0 e0       	ldi	r29, 0x00	; 0
+	{GLCD_Dot(45,i);}
+     6e0:	be 01       	movw	r22, r28
+     6e2:	8d e2       	ldi	r24, 0x2D	; 45
+     6e4:	90 e0       	ldi	r25, 0x00	; 0
+     6e6:	84 d7       	rcall	.+3848   	; 0x15f0 <GLCD_Dot>
+}
+
+void setHouse(void)					//πË∞Ê - ¡˝ µµ∆Æ
+{
+	int i;
+	for(i=8; i<40; i++)
+     6e8:	21 96       	adiw	r28, 0x01	; 1
+     6ea:	c8 32       	cpi	r28, 0x28	; 40
+     6ec:	d1 05       	cpc	r29, r1
+     6ee:	c1 f7       	brne	.-16     	; 0x6e0 <setHouse+0x8>
+	{GLCD_Dot(45,i);}
+	GLCD_Dot(44,8);
+     6f0:	68 e0       	ldi	r22, 0x08	; 8
+     6f2:	70 e0       	ldi	r23, 0x00	; 0
+     6f4:	8c e2       	ldi	r24, 0x2C	; 44
+     6f6:	90 e0       	ldi	r25, 0x00	; 0
+     6f8:	7b d7       	rcall	.+3830   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(44,27);
+     6fa:	6b e1       	ldi	r22, 0x1B	; 27
+     6fc:	70 e0       	ldi	r23, 0x00	; 0
+     6fe:	8c e2       	ldi	r24, 0x2C	; 44
+     700:	90 e0       	ldi	r25, 0x00	; 0
+     702:	76 d7       	rcall	.+3820   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(44,34);
+     704:	62 e2       	ldi	r22, 0x22	; 34
+     706:	70 e0       	ldi	r23, 0x00	; 0
+     708:	8c e2       	ldi	r24, 0x2C	; 44
+     70a:	90 e0       	ldi	r25, 0x00	; 0
+     70c:	71 d7       	rcall	.+3810   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(44,39);
+     70e:	67 e2       	ldi	r22, 0x27	; 39
+     710:	70 e0       	ldi	r23, 0x00	; 0
+     712:	8c e2       	ldi	r24, 0x2C	; 44
+     714:	90 e0       	ldi	r25, 0x00	; 0
+     716:	6c d7       	rcall	.+3800   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(43,8);
+     718:	68 e0       	ldi	r22, 0x08	; 8
+     71a:	70 e0       	ldi	r23, 0x00	; 0
+     71c:	8b e2       	ldi	r24, 0x2B	; 43
+     71e:	90 e0       	ldi	r25, 0x00	; 0
+     720:	67 d7       	rcall	.+3790   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(43,27);
+     722:	6b e1       	ldi	r22, 0x1B	; 27
+     724:	70 e0       	ldi	r23, 0x00	; 0
+     726:	8b e2       	ldi	r24, 0x2B	; 43
+     728:	90 e0       	ldi	r25, 0x00	; 0
+     72a:	62 d7       	rcall	.+3780   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(43,34);
+     72c:	62 e2       	ldi	r22, 0x22	; 34
+     72e:	70 e0       	ldi	r23, 0x00	; 0
+     730:	8b e2       	ldi	r24, 0x2B	; 43
+     732:	90 e0       	ldi	r25, 0x00	; 0
+     734:	5d d7       	rcall	.+3770   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(43,39);
+     736:	67 e2       	ldi	r22, 0x27	; 39
+     738:	70 e0       	ldi	r23, 0x00	; 0
+     73a:	8b e2       	ldi	r24, 0x2B	; 43
+     73c:	90 e0       	ldi	r25, 0x00	; 0
+     73e:	58 d7       	rcall	.+3760   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(42,8);
+     740:	68 e0       	ldi	r22, 0x08	; 8
+     742:	70 e0       	ldi	r23, 0x00	; 0
+     744:	8a e2       	ldi	r24, 0x2A	; 42
+     746:	90 e0       	ldi	r25, 0x00	; 0
+     748:	53 d7       	rcall	.+3750   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,9);
+     74a:	69 e0       	ldi	r22, 0x09	; 9
+     74c:	70 e0       	ldi	r23, 0x00	; 0
+     74e:	8a e2       	ldi	r24, 0x2A	; 42
+     750:	90 e0       	ldi	r25, 0x00	; 0
+     752:	4e d7       	rcall	.+3740   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,10);
+     754:	6a e0       	ldi	r22, 0x0A	; 10
+     756:	70 e0       	ldi	r23, 0x00	; 0
+     758:	8a e2       	ldi	r24, 0x2A	; 42
+     75a:	90 e0       	ldi	r25, 0x00	; 0
+     75c:	49 d7       	rcall	.+3730   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,11);
+     75e:	6b e0       	ldi	r22, 0x0B	; 11
+     760:	70 e0       	ldi	r23, 0x00	; 0
+     762:	8a e2       	ldi	r24, 0x2A	; 42
+     764:	90 e0       	ldi	r25, 0x00	; 0
+     766:	44 d7       	rcall	.+3720   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,21);
+     768:	65 e1       	ldi	r22, 0x15	; 21
+     76a:	70 e0       	ldi	r23, 0x00	; 0
+     76c:	8a e2       	ldi	r24, 0x2A	; 42
+     76e:	90 e0       	ldi	r25, 0x00	; 0
+     770:	3f d7       	rcall	.+3710   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,22);
+     772:	66 e1       	ldi	r22, 0x16	; 22
+     774:	70 e0       	ldi	r23, 0x00	; 0
+     776:	8a e2       	ldi	r24, 0x2A	; 42
+     778:	90 e0       	ldi	r25, 0x00	; 0
+     77a:	3a d7       	rcall	.+3700   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,23);
+     77c:	67 e1       	ldi	r22, 0x17	; 23
+     77e:	70 e0       	ldi	r23, 0x00	; 0
+     780:	8a e2       	ldi	r24, 0x2A	; 42
+     782:	90 e0       	ldi	r25, 0x00	; 0
+     784:	35 d7       	rcall	.+3690   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,27);
+     786:	6b e1       	ldi	r22, 0x1B	; 27
+     788:	70 e0       	ldi	r23, 0x00	; 0
+     78a:	8a e2       	ldi	r24, 0x2A	; 42
+     78c:	90 e0       	ldi	r25, 0x00	; 0
+     78e:	30 d7       	rcall	.+3680   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,34);
+     790:	62 e2       	ldi	r22, 0x22	; 34
+     792:	70 e0       	ldi	r23, 0x00	; 0
+     794:	8a e2       	ldi	r24, 0x2A	; 42
+     796:	90 e0       	ldi	r25, 0x00	; 0
+     798:	2b d7       	rcall	.+3670   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,36);
+     79a:	64 e2       	ldi	r22, 0x24	; 36
+     79c:	70 e0       	ldi	r23, 0x00	; 0
+     79e:	8a e2       	ldi	r24, 0x2A	; 42
+     7a0:	90 e0       	ldi	r25, 0x00	; 0
+     7a2:	26 d7       	rcall	.+3660   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,37);
+     7a4:	65 e2       	ldi	r22, 0x25	; 37
+     7a6:	70 e0       	ldi	r23, 0x00	; 0
+     7a8:	8a e2       	ldi	r24, 0x2A	; 42
+     7aa:	90 e0       	ldi	r25, 0x00	; 0
+     7ac:	21 d7       	rcall	.+3650   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,38);
+     7ae:	66 e2       	ldi	r22, 0x26	; 38
+     7b0:	70 e0       	ldi	r23, 0x00	; 0
+     7b2:	8a e2       	ldi	r24, 0x2A	; 42
+     7b4:	90 e0       	ldi	r25, 0x00	; 0
+     7b6:	1c d7       	rcall	.+3640   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(42,39);
+     7b8:	67 e2       	ldi	r22, 0x27	; 39
+     7ba:	70 e0       	ldi	r23, 0x00	; 0
+     7bc:	8a e2       	ldi	r24, 0x2A	; 42
+     7be:	90 e0       	ldi	r25, 0x00	; 0
+     7c0:	17 d7       	rcall	.+3630   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(41,8);
+     7c2:	68 e0       	ldi	r22, 0x08	; 8
+     7c4:	70 e0       	ldi	r23, 0x00	; 0
+     7c6:	89 e2       	ldi	r24, 0x29	; 41
+     7c8:	90 e0       	ldi	r25, 0x00	; 0
+     7ca:	12 d7       	rcall	.+3620   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,10);
+     7cc:	6a e0       	ldi	r22, 0x0A	; 10
+     7ce:	70 e0       	ldi	r23, 0x00	; 0
+     7d0:	89 e2       	ldi	r24, 0x29	; 41
+     7d2:	90 e0       	ldi	r25, 0x00	; 0
+     7d4:	0d d7       	rcall	.+3610   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,11);
+     7d6:	6b e0       	ldi	r22, 0x0B	; 11
+     7d8:	70 e0       	ldi	r23, 0x00	; 0
+     7da:	89 e2       	ldi	r24, 0x29	; 41
+     7dc:	90 e0       	ldi	r25, 0x00	; 0
+     7de:	08 d7       	rcall	.+3600   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,22);
+     7e0:	66 e1       	ldi	r22, 0x16	; 22
+     7e2:	70 e0       	ldi	r23, 0x00	; 0
+     7e4:	89 e2       	ldi	r24, 0x29	; 41
+     7e6:	90 e0       	ldi	r25, 0x00	; 0
+     7e8:	03 d7       	rcall	.+3590   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,23);
+     7ea:	67 e1       	ldi	r22, 0x17	; 23
+     7ec:	70 e0       	ldi	r23, 0x00	; 0
+     7ee:	89 e2       	ldi	r24, 0x29	; 41
+     7f0:	90 e0       	ldi	r25, 0x00	; 0
+     7f2:	fe d6       	rcall	.+3580   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,27);
+     7f4:	6b e1       	ldi	r22, 0x1B	; 27
+     7f6:	70 e0       	ldi	r23, 0x00	; 0
+     7f8:	89 e2       	ldi	r24, 0x29	; 41
+     7fa:	90 e0       	ldi	r25, 0x00	; 0
+     7fc:	f9 d6       	rcall	.+3570   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,37);
+     7fe:	65 e2       	ldi	r22, 0x25	; 37
+     800:	70 e0       	ldi	r23, 0x00	; 0
+     802:	89 e2       	ldi	r24, 0x29	; 41
+     804:	90 e0       	ldi	r25, 0x00	; 0
+     806:	f4 d6       	rcall	.+3560   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,38);
+     808:	66 e2       	ldi	r22, 0x26	; 38
+     80a:	70 e0       	ldi	r23, 0x00	; 0
+     80c:	89 e2       	ldi	r24, 0x29	; 41
+     80e:	90 e0       	ldi	r25, 0x00	; 0
+     810:	ef d6       	rcall	.+3550   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(41,39);
+     812:	67 e2       	ldi	r22, 0x27	; 39
+     814:	70 e0       	ldi	r23, 0x00	; 0
+     816:	89 e2       	ldi	r24, 0x29	; 41
+     818:	90 e0       	ldi	r25, 0x00	; 0
+     81a:	ea d6       	rcall	.+3540   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(40,8);
+     81c:	68 e0       	ldi	r22, 0x08	; 8
+     81e:	70 e0       	ldi	r23, 0x00	; 0
+     820:	88 e2       	ldi	r24, 0x28	; 40
+     822:	90 e0       	ldi	r25, 0x00	; 0
+     824:	e5 d6       	rcall	.+3530   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(40,13);
+     826:	6d e0       	ldi	r22, 0x0D	; 13
+     828:	70 e0       	ldi	r23, 0x00	; 0
+     82a:	88 e2       	ldi	r24, 0x28	; 40
+     82c:	90 e0       	ldi	r25, 0x00	; 0
+     82e:	e0 d6       	rcall	.+3520   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(40,14);
+     830:	6e e0       	ldi	r22, 0x0E	; 14
+     832:	70 e0       	ldi	r23, 0x00	; 0
+     834:	88 e2       	ldi	r24, 0x28	; 40
+     836:	90 e0       	ldi	r25, 0x00	; 0
+     838:	db d6       	rcall	.+3510   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(40,15);
+     83a:	6f e0       	ldi	r22, 0x0F	; 15
+     83c:	70 e0       	ldi	r23, 0x00	; 0
+     83e:	88 e2       	ldi	r24, 0x28	; 40
+     840:	90 e0       	ldi	r25, 0x00	; 0
+     842:	d6 d6       	rcall	.+3500   	; 0x15f0 <GLCD_Dot>
+     844:	60 e1       	ldi	r22, 0x10	; 16
+	GLCD_Dot(40,16);
+     846:	70 e0       	ldi	r23, 0x00	; 0
+     848:	88 e2       	ldi	r24, 0x28	; 40
+     84a:	90 e0       	ldi	r25, 0x00	; 0
+     84c:	d1 d6       	rcall	.+3490   	; 0x15f0 <GLCD_Dot>
+     84e:	61 e1       	ldi	r22, 0x11	; 17
+     850:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(40,17);
+     852:	88 e2       	ldi	r24, 0x28	; 40
+     854:	90 e0       	ldi	r25, 0x00	; 0
+     856:	cc d6       	rcall	.+3480   	; 0x15f0 <GLCD_Dot>
+     858:	62 e1       	ldi	r22, 0x12	; 18
+     85a:	70 e0       	ldi	r23, 0x00	; 0
+     85c:	88 e2       	ldi	r24, 0x28	; 40
+	GLCD_Dot(40,18);
+     85e:	90 e0       	ldi	r25, 0x00	; 0
+     860:	c7 d6       	rcall	.+3470   	; 0x15f0 <GLCD_Dot>
+     862:	63 e1       	ldi	r22, 0x13	; 19
+     864:	70 e0       	ldi	r23, 0x00	; 0
+     866:	88 e2       	ldi	r24, 0x28	; 40
+     868:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(40,19);
+     86a:	c2 d6       	rcall	.+3460   	; 0x15f0 <GLCD_Dot>
+     86c:	64 e1       	ldi	r22, 0x14	; 20
+     86e:	70 e0       	ldi	r23, 0x00	; 0
+     870:	88 e2       	ldi	r24, 0x28	; 40
+     872:	90 e0       	ldi	r25, 0x00	; 0
+     874:	bd d6       	rcall	.+3450   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(40,20);
+     876:	65 e1       	ldi	r22, 0x15	; 21
+     878:	70 e0       	ldi	r23, 0x00	; 0
+     87a:	88 e2       	ldi	r24, 0x28	; 40
+     87c:	90 e0       	ldi	r25, 0x00	; 0
+     87e:	b8 d6       	rcall	.+3440   	; 0x15f0 <GLCD_Dot>
+     880:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(40,21);
+     882:	70 e0       	ldi	r23, 0x00	; 0
+     884:	88 e2       	ldi	r24, 0x28	; 40
+     886:	90 e0       	ldi	r25, 0x00	; 0
+     888:	b3 d6       	rcall	.+3430   	; 0x15f0 <GLCD_Dot>
+     88a:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(40,22);
+     88c:	70 e0       	ldi	r23, 0x00	; 0
+     88e:	88 e2       	ldi	r24, 0x28	; 40
+     890:	90 e0       	ldi	r25, 0x00	; 0
+     892:	ae d6       	rcall	.+3420   	; 0x15f0 <GLCD_Dot>
+     894:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(40,27);
+     896:	70 e0       	ldi	r23, 0x00	; 0
+     898:	88 e2       	ldi	r24, 0x28	; 40
+     89a:	90 e0       	ldi	r25, 0x00	; 0
+     89c:	a9 d6       	rcall	.+3410   	; 0x15f0 <GLCD_Dot>
+     89e:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(40,34);
+     8a0:	70 e0       	ldi	r23, 0x00	; 0
+     8a2:	88 e2       	ldi	r24, 0x28	; 40
+     8a4:	90 e0       	ldi	r25, 0x00	; 0
+     8a6:	a4 d6       	rcall	.+3400   	; 0x15f0 <GLCD_Dot>
+     8a8:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(40,39);
+     8aa:	70 e0       	ldi	r23, 0x00	; 0
+     8ac:	87 e2       	ldi	r24, 0x27	; 39
+     8ae:	90 e0       	ldi	r25, 0x00	; 0
+     8b0:	9f d6       	rcall	.+3390   	; 0x15f0 <GLCD_Dot>
+     8b2:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(39,8);
+     8b4:	70 e0       	ldi	r23, 0x00	; 0
+     8b6:	87 e2       	ldi	r24, 0x27	; 39
+     8b8:	90 e0       	ldi	r25, 0x00	; 0
+     8ba:	9a d6       	rcall	.+3380   	; 0x15f0 <GLCD_Dot>
+     8bc:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(39,13);
+     8be:	70 e0       	ldi	r23, 0x00	; 0
+     8c0:	87 e2       	ldi	r24, 0x27	; 39
+     8c2:	90 e0       	ldi	r25, 0x00	; 0
+     8c4:	95 d6       	rcall	.+3370   	; 0x15f0 <GLCD_Dot>
+     8c6:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(39,22);
+     8c8:	70 e0       	ldi	r23, 0x00	; 0
+     8ca:	87 e2       	ldi	r24, 0x27	; 39
+     8cc:	90 e0       	ldi	r25, 0x00	; 0
+     8ce:	90 d6       	rcall	.+3360   	; 0x15f0 <GLCD_Dot>
+     8d0:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(39,27);
+     8d2:	70 e0       	ldi	r23, 0x00	; 0
+     8d4:	87 e2       	ldi	r24, 0x27	; 39
+     8d6:	90 e0       	ldi	r25, 0x00	; 0
+     8d8:	8b d6       	rcall	.+3350   	; 0x15f0 <GLCD_Dot>
+     8da:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(39,34);
+     8dc:	70 e0       	ldi	r23, 0x00	; 0
+     8de:	87 e2       	ldi	r24, 0x27	; 39
+     8e0:	90 e0       	ldi	r25, 0x00	; 0
+     8e2:	86 d6       	rcall	.+3340   	; 0x15f0 <GLCD_Dot>
+     8e4:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(39,39);
+     8e6:	70 e0       	ldi	r23, 0x00	; 0
+     8e8:	86 e2       	ldi	r24, 0x26	; 38
+     8ea:	90 e0       	ldi	r25, 0x00	; 0
+     8ec:	81 d6       	rcall	.+3330   	; 0x15f0 <GLCD_Dot>
+     8ee:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(38,8);
+     8f0:	70 e0       	ldi	r23, 0x00	; 0
+     8f2:	86 e2       	ldi	r24, 0x26	; 38
+     8f4:	90 e0       	ldi	r25, 0x00	; 0
+     8f6:	7c d6       	rcall	.+3320   	; 0x15f0 <GLCD_Dot>
+     8f8:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(38,13);
+     8fa:	70 e0       	ldi	r23, 0x00	; 0
+     8fc:	86 e2       	ldi	r24, 0x26	; 38
+     8fe:	90 e0       	ldi	r25, 0x00	; 0
+     900:	77 d6       	rcall	.+3310   	; 0x15f0 <GLCD_Dot>
+     902:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(38,22);
+     904:	70 e0       	ldi	r23, 0x00	; 0
+     906:	86 e2       	ldi	r24, 0x26	; 38
+     908:	90 e0       	ldi	r25, 0x00	; 0
+     90a:	72 d6       	rcall	.+3300   	; 0x15f0 <GLCD_Dot>
+     90c:	6d e1       	ldi	r22, 0x1D	; 29
+	GLCD_Dot(38,27);
+     90e:	70 e0       	ldi	r23, 0x00	; 0
+     910:	86 e2       	ldi	r24, 0x26	; 38
+     912:	90 e0       	ldi	r25, 0x00	; 0
+     914:	6d d6       	rcall	.+3290   	; 0x15f0 <GLCD_Dot>
+     916:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(38,29);
+     918:	70 e0       	ldi	r23, 0x00	; 0
+     91a:	86 e2       	ldi	r24, 0x26	; 38
+     91c:	90 e0       	ldi	r25, 0x00	; 0
+     91e:	68 d6       	rcall	.+3280   	; 0x15f0 <GLCD_Dot>
+     920:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(38,34);
+     922:	70 e0       	ldi	r23, 0x00	; 0
+     924:	86 e2       	ldi	r24, 0x26	; 38
+     926:	90 e0       	ldi	r25, 0x00	; 0
+     928:	63 d6       	rcall	.+3270   	; 0x15f0 <GLCD_Dot>
+     92a:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(38,39);
+     92c:	70 e0       	ldi	r23, 0x00	; 0
+     92e:	86 e2       	ldi	r24, 0x26	; 38
+     930:	90 e0       	ldi	r25, 0x00	; 0
+     932:	5e d6       	rcall	.+3260   	; 0x15f0 <GLCD_Dot>
+     934:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(38,8);
+     936:	70 e0       	ldi	r23, 0x00	; 0
+     938:	86 e2       	ldi	r24, 0x26	; 38
+     93a:	90 e0       	ldi	r25, 0x00	; 0
+     93c:	59 d6       	rcall	.+3250   	; 0x15f0 <GLCD_Dot>
+     93e:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(38,13);
+     940:	70 e0       	ldi	r23, 0x00	; 0
+     942:	86 e2       	ldi	r24, 0x26	; 38
+     944:	90 e0       	ldi	r25, 0x00	; 0
+     946:	54 d6       	rcall	.+3240   	; 0x15f0 <GLCD_Dot>
+     948:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(38,22);
+     94a:	70 e0       	ldi	r23, 0x00	; 0
+     94c:	86 e2       	ldi	r24, 0x26	; 38
+     94e:	90 e0       	ldi	r25, 0x00	; 0
+     950:	4f d6       	rcall	.+3230   	; 0x15f0 <GLCD_Dot>
+     952:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(38,27);
+     954:	70 e0       	ldi	r23, 0x00	; 0
+     956:	86 e2       	ldi	r24, 0x26	; 38
+     958:	90 e0       	ldi	r25, 0x00	; 0
+     95a:	4a d6       	rcall	.+3220   	; 0x15f0 <GLCD_Dot>
+     95c:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(38,34);
+     95e:	70 e0       	ldi	r23, 0x00	; 0
+     960:	86 e2       	ldi	r24, 0x26	; 38
+     962:	90 e0       	ldi	r25, 0x00	; 0
+     964:	45 d6       	rcall	.+3210   	; 0x15f0 <GLCD_Dot>
+     966:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(38,39);
+     968:	70 e0       	ldi	r23, 0x00	; 0
+     96a:	85 e2       	ldi	r24, 0x25	; 37
+     96c:	90 e0       	ldi	r25, 0x00	; 0
+     96e:	40 d6       	rcall	.+3200   	; 0x15f0 <GLCD_Dot>
+     970:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(37,8);
+     972:	70 e0       	ldi	r23, 0x00	; 0
+     974:	85 e2       	ldi	r24, 0x25	; 37
+     976:	90 e0       	ldi	r25, 0x00	; 0
+     978:	3b d6       	rcall	.+3190   	; 0x15f0 <GLCD_Dot>
+     97a:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(37,13);
+     97c:	70 e0       	ldi	r23, 0x00	; 0
+     97e:	85 e2       	ldi	r24, 0x25	; 37
+     980:	90 e0       	ldi	r25, 0x00	; 0
+     982:	36 d6       	rcall	.+3180   	; 0x15f0 <GLCD_Dot>
+     984:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(37,22);
+     986:	70 e0       	ldi	r23, 0x00	; 0
+     988:	85 e2       	ldi	r24, 0x25	; 37
+     98a:	90 e0       	ldi	r25, 0x00	; 0
+     98c:	31 d6       	rcall	.+3170   	; 0x15f0 <GLCD_Dot>
+     98e:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(37,27);
+     990:	70 e0       	ldi	r23, 0x00	; 0
+     992:	85 e2       	ldi	r24, 0x25	; 37
+     994:	90 e0       	ldi	r25, 0x00	; 0
+     996:	2c d6       	rcall	.+3160   	; 0x15f0 <GLCD_Dot>
+     998:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(37,34);
+     99a:	70 e0       	ldi	r23, 0x00	; 0
+     99c:	85 e2       	ldi	r24, 0x25	; 37
+     99e:	90 e0       	ldi	r25, 0x00	; 0
+     9a0:	27 d6       	rcall	.+3150   	; 0x15f0 <GLCD_Dot>
+     9a2:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(37,39);
+     9a4:	70 e0       	ldi	r23, 0x00	; 0
+     9a6:	84 e2       	ldi	r24, 0x24	; 36
+     9a8:	90 e0       	ldi	r25, 0x00	; 0
+     9aa:	22 d6       	rcall	.+3140   	; 0x15f0 <GLCD_Dot>
+     9ac:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(36,8);
+     9ae:	70 e0       	ldi	r23, 0x00	; 0
+     9b0:	84 e2       	ldi	r24, 0x24	; 36
+     9b2:	90 e0       	ldi	r25, 0x00	; 0
+     9b4:	1d d6       	rcall	.+3130   	; 0x15f0 <GLCD_Dot>
+     9b6:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(36,13);
+     9b8:	70 e0       	ldi	r23, 0x00	; 0
+     9ba:	84 e2       	ldi	r24, 0x24	; 36
+     9bc:	90 e0       	ldi	r25, 0x00	; 0
+     9be:	18 d6       	rcall	.+3120   	; 0x15f0 <GLCD_Dot>
+     9c0:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(36,22);
+     9c2:	70 e0       	ldi	r23, 0x00	; 0
+     9c4:	84 e2       	ldi	r24, 0x24	; 36
+     9c6:	90 e0       	ldi	r25, 0x00	; 0
+     9c8:	13 d6       	rcall	.+3110   	; 0x15f0 <GLCD_Dot>
+     9ca:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(36,27);
+     9cc:	70 e0       	ldi	r23, 0x00	; 0
+     9ce:	84 e2       	ldi	r24, 0x24	; 36
+     9d0:	90 e0       	ldi	r25, 0x00	; 0
+     9d2:	0e d6       	rcall	.+3100   	; 0x15f0 <GLCD_Dot>
+     9d4:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(36,34);
+     9d6:	70 e0       	ldi	r23, 0x00	; 0
+     9d8:	84 e2       	ldi	r24, 0x24	; 36
+     9da:	90 e0       	ldi	r25, 0x00	; 0
+     9dc:	09 d6       	rcall	.+3090   	; 0x15f0 <GLCD_Dot>
+     9de:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(36,39);
+     9e0:	70 e0       	ldi	r23, 0x00	; 0
+     9e2:	83 e2       	ldi	r24, 0x23	; 35
+     9e4:	90 e0       	ldi	r25, 0x00	; 0
+     9e6:	04 d6       	rcall	.+3080   	; 0x15f0 <GLCD_Dot>
+     9e8:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(35,8);
+     9ea:	70 e0       	ldi	r23, 0x00	; 0
+     9ec:	83 e2       	ldi	r24, 0x23	; 35
+     9ee:	90 e0       	ldi	r25, 0x00	; 0
+     9f0:	ff d5       	rcall	.+3070   	; 0x15f0 <GLCD_Dot>
+     9f2:	6e e0       	ldi	r22, 0x0E	; 14
+	GLCD_Dot(35,13);
+     9f4:	70 e0       	ldi	r23, 0x00	; 0
+     9f6:	83 e2       	ldi	r24, 0x23	; 35
+     9f8:	90 e0       	ldi	r25, 0x00	; 0
+     9fa:	fa d5       	rcall	.+3060   	; 0x15f0 <GLCD_Dot>
+     9fc:	65 e1       	ldi	r22, 0x15	; 21
+	GLCD_Dot(35,14);
+     9fe:	70 e0       	ldi	r23, 0x00	; 0
+     a00:	83 e2       	ldi	r24, 0x23	; 35
+     a02:	90 e0       	ldi	r25, 0x00	; 0
+     a04:	f5 d5       	rcall	.+3050   	; 0x15f0 <GLCD_Dot>
+     a06:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(35,21);
+     a08:	70 e0       	ldi	r23, 0x00	; 0
+     a0a:	83 e2       	ldi	r24, 0x23	; 35
+     a0c:	90 e0       	ldi	r25, 0x00	; 0
+     a0e:	f0 d5       	rcall	.+3040   	; 0x15f0 <GLCD_Dot>
+     a10:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(35,22);
+     a12:	70 e0       	ldi	r23, 0x00	; 0
+     a14:	83 e2       	ldi	r24, 0x23	; 35
+     a16:	90 e0       	ldi	r25, 0x00	; 0
+     a18:	eb d5       	rcall	.+3030   	; 0x15f0 <GLCD_Dot>
+     a1a:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(35,27);
+     a1c:	70 e0       	ldi	r23, 0x00	; 0
+     a1e:	83 e2       	ldi	r24, 0x23	; 35
+     a20:	90 e0       	ldi	r25, 0x00	; 0
+     a22:	e6 d5       	rcall	.+3020   	; 0x15f0 <GLCD_Dot>
+     a24:	63 e2       	ldi	r22, 0x23	; 35
+	GLCD_Dot(35,34);
+     a26:	70 e0       	ldi	r23, 0x00	; 0
+     a28:	83 e2       	ldi	r24, 0x23	; 35
+     a2a:	90 e0       	ldi	r25, 0x00	; 0
+     a2c:	e1 d5       	rcall	.+3010   	; 0x15f0 <GLCD_Dot>
+     a2e:	64 e2       	ldi	r22, 0x24	; 36
+	GLCD_Dot(35,35);
+     a30:	70 e0       	ldi	r23, 0x00	; 0
+     a32:	83 e2       	ldi	r24, 0x23	; 35
+     a34:	90 e0       	ldi	r25, 0x00	; 0
+     a36:	dc d5       	rcall	.+3000   	; 0x15f0 <GLCD_Dot>
+     a38:	65 e2       	ldi	r22, 0x25	; 37
+	GLCD_Dot(35,36);
+     a3a:	70 e0       	ldi	r23, 0x00	; 0
+     a3c:	83 e2       	ldi	r24, 0x23	; 35
+     a3e:	90 e0       	ldi	r25, 0x00	; 0
+     a40:	d7 d5       	rcall	.+2990   	; 0x15f0 <GLCD_Dot>
+     a42:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(35,37);
+     a44:	70 e0       	ldi	r23, 0x00	; 0
+     a46:	83 e2       	ldi	r24, 0x23	; 35
+     a48:	90 e0       	ldi	r25, 0x00	; 0
+     a4a:	d2 d5       	rcall	.+2980   	; 0x15f0 <GLCD_Dot>
+     a4c:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(35,39);
+     a4e:	70 e0       	ldi	r23, 0x00	; 0
+     a50:	82 e2       	ldi	r24, 0x22	; 34
+     a52:	90 e0       	ldi	r25, 0x00	; 0
+     a54:	cd d5       	rcall	.+2970   	; 0x15f0 <GLCD_Dot>
+     a56:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(34,8);
+     a58:	70 e0       	ldi	r23, 0x00	; 0
+     a5a:	82 e2       	ldi	r24, 0x22	; 34
+     a5c:	90 e0       	ldi	r25, 0x00	; 0
+     a5e:	c8 d5       	rcall	.+2960   	; 0x15f0 <GLCD_Dot>
+     a60:	6e e0       	ldi	r22, 0x0E	; 14
+	GLCD_Dot(34,13);
+     a62:	70 e0       	ldi	r23, 0x00	; 0
+     a64:	82 e2       	ldi	r24, 0x22	; 34
+     a66:	90 e0       	ldi	r25, 0x00	; 0
+     a68:	c3 d5       	rcall	.+2950   	; 0x15f0 <GLCD_Dot>
+     a6a:	6f e0       	ldi	r22, 0x0F	; 15
+	GLCD_Dot(34,14);
+     a6c:	70 e0       	ldi	r23, 0x00	; 0
+     a6e:	82 e2       	ldi	r24, 0x22	; 34
+     a70:	90 e0       	ldi	r25, 0x00	; 0
+     a72:	be d5       	rcall	.+2940   	; 0x15f0 <GLCD_Dot>
+     a74:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(34,15);
+     a76:	70 e0       	ldi	r23, 0x00	; 0
+     a78:	82 e2       	ldi	r24, 0x22	; 34
+     a7a:	90 e0       	ldi	r25, 0x00	; 0
+     a7c:	b9 d5       	rcall	.+2930   	; 0x15f0 <GLCD_Dot>
+     a7e:	65 e1       	ldi	r22, 0x15	; 21
+	GLCD_Dot(34,22);
+     a80:	70 e0       	ldi	r23, 0x00	; 0
+     a82:	82 e2       	ldi	r24, 0x22	; 34
+     a84:	90 e0       	ldi	r25, 0x00	; 0
+     a86:	b4 d5       	rcall	.+2920   	; 0x15f0 <GLCD_Dot>
+     a88:	64 e1       	ldi	r22, 0x14	; 20
+	GLCD_Dot(34,21);
+     a8a:	70 e0       	ldi	r23, 0x00	; 0
+     a8c:	82 e2       	ldi	r24, 0x22	; 34
+     a8e:	90 e0       	ldi	r25, 0x00	; 0
+     a90:	af d5       	rcall	.+2910   	; 0x15f0 <GLCD_Dot>
+     a92:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(34,20);
+     a94:	70 e0       	ldi	r23, 0x00	; 0
+     a96:	82 e2       	ldi	r24, 0x22	; 34
+     a98:	90 e0       	ldi	r25, 0x00	; 0
+     a9a:	aa d5       	rcall	.+2900   	; 0x15f0 <GLCD_Dot>
+     a9c:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(34,27);
+     a9e:	70 e0       	ldi	r23, 0x00	; 0
+     aa0:	82 e2       	ldi	r24, 0x22	; 34
+     aa2:	90 e0       	ldi	r25, 0x00	; 0
+     aa4:	a5 d5       	rcall	.+2890   	; 0x15f0 <GLCD_Dot>
+     aa6:	64 e2       	ldi	r22, 0x24	; 36
+	GLCD_Dot(34,34);
+     aa8:	70 e0       	ldi	r23, 0x00	; 0
+     aaa:	82 e2       	ldi	r24, 0x22	; 34
+     aac:	90 e0       	ldi	r25, 0x00	; 0
+     aae:	a0 d5       	rcall	.+2880   	; 0x15f0 <GLCD_Dot>
+     ab0:	65 e2       	ldi	r22, 0x25	; 37
+	GLCD_Dot(34,36);
+     ab2:	70 e0       	ldi	r23, 0x00	; 0
+     ab4:	82 e2       	ldi	r24, 0x22	; 34
+     ab6:	90 e0       	ldi	r25, 0x00	; 0
+     ab8:	9b d5       	rcall	.+2870   	; 0x15f0 <GLCD_Dot>
+     aba:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(34,37);
+     abc:	70 e0       	ldi	r23, 0x00	; 0
+     abe:	82 e2       	ldi	r24, 0x22	; 34
+     ac0:	90 e0       	ldi	r25, 0x00	; 0
+     ac2:	96 d5       	rcall	.+2860   	; 0x15f0 <GLCD_Dot>
+     ac4:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(34,39);
+     ac6:	70 e0       	ldi	r23, 0x00	; 0
+     ac8:	81 e2       	ldi	r24, 0x21	; 33
+     aca:	90 e0       	ldi	r25, 0x00	; 0
+     acc:	91 d5       	rcall	.+2850   	; 0x15f0 <GLCD_Dot>
+     ace:	6d e0       	ldi	r22, 0x0D	; 13
+	
+	GLCD_Dot(33,8);
+     ad0:	70 e0       	ldi	r23, 0x00	; 0
+     ad2:	81 e2       	ldi	r24, 0x21	; 33
+     ad4:	90 e0       	ldi	r25, 0x00	; 0
+     ad6:	8c d5       	rcall	.+2840   	; 0x15f0 <GLCD_Dot>
+     ad8:	6e e0       	ldi	r22, 0x0E	; 14
+	GLCD_Dot(33,13);
+     ada:	70 e0       	ldi	r23, 0x00	; 0
+     adc:	81 e2       	ldi	r24, 0x21	; 33
+     ade:	90 e0       	ldi	r25, 0x00	; 0
+     ae0:	87 d5       	rcall	.+2830   	; 0x15f0 <GLCD_Dot>
+     ae2:	6f e0       	ldi	r22, 0x0F	; 15
+	GLCD_Dot(33,14);
+     ae4:	70 e0       	ldi	r23, 0x00	; 0
+     ae6:	81 e2       	ldi	r24, 0x21	; 33
+     ae8:	90 e0       	ldi	r25, 0x00	; 0
+     aea:	82 d5       	rcall	.+2820   	; 0x15f0 <GLCD_Dot>
+     aec:	60 e1       	ldi	r22, 0x10	; 16
+	GLCD_Dot(33,15);
+     aee:	70 e0       	ldi	r23, 0x00	; 0
+     af0:	81 e2       	ldi	r24, 0x21	; 33
+     af2:	90 e0       	ldi	r25, 0x00	; 0
+     af4:	7d d5       	rcall	.+2810   	; 0x15f0 <GLCD_Dot>
+     af6:	61 e1       	ldi	r22, 0x11	; 17
+	GLCD_Dot(33,16);
+     af8:	70 e0       	ldi	r23, 0x00	; 0
+     afa:	81 e2       	ldi	r24, 0x21	; 33
+     afc:	90 e0       	ldi	r25, 0x00	; 0
+     afe:	78 d5       	rcall	.+2800   	; 0x15f0 <GLCD_Dot>
+     b00:	62 e1       	ldi	r22, 0x12	; 18
+	GLCD_Dot(33,17);
+     b02:	70 e0       	ldi	r23, 0x00	; 0
+     b04:	81 e2       	ldi	r24, 0x21	; 33
+     b06:	90 e0       	ldi	r25, 0x00	; 0
+     b08:	73 d5       	rcall	.+2790   	; 0x15f0 <GLCD_Dot>
+     b0a:	63 e1       	ldi	r22, 0x13	; 19
+	GLCD_Dot(33,18);
+     b0c:	70 e0       	ldi	r23, 0x00	; 0
+     b0e:	81 e2       	ldi	r24, 0x21	; 33
+     b10:	90 e0       	ldi	r25, 0x00	; 0
+     b12:	6e d5       	rcall	.+2780   	; 0x15f0 <GLCD_Dot>
+     b14:	64 e1       	ldi	r22, 0x14	; 20
+	GLCD_Dot(33,19);
+     b16:	70 e0       	ldi	r23, 0x00	; 0
+     b18:	81 e2       	ldi	r24, 0x21	; 33
+     b1a:	90 e0       	ldi	r25, 0x00	; 0
+     b1c:	69 d5       	rcall	.+2770   	; 0x15f0 <GLCD_Dot>
+     b1e:	65 e1       	ldi	r22, 0x15	; 21
+	GLCD_Dot(33,20);
+     b20:	70 e0       	ldi	r23, 0x00	; 0
+     b22:	81 e2       	ldi	r24, 0x21	; 33
+     b24:	90 e0       	ldi	r25, 0x00	; 0
+     b26:	64 d5       	rcall	.+2760   	; 0x15f0 <GLCD_Dot>
+     b28:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(33,21);
+     b2a:	70 e0       	ldi	r23, 0x00	; 0
+     b2c:	81 e2       	ldi	r24, 0x21	; 33
+     b2e:	90 e0       	ldi	r25, 0x00	; 0
+     b30:	5f d5       	rcall	.+2750   	; 0x15f0 <GLCD_Dot>
+     b32:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(33,22);
+     b34:	70 e0       	ldi	r23, 0x00	; 0
+     b36:	81 e2       	ldi	r24, 0x21	; 33
+     b38:	90 e0       	ldi	r25, 0x00	; 0
+     b3a:	5a d5       	rcall	.+2740   	; 0x15f0 <GLCD_Dot>
+     b3c:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(33,27);
+     b3e:	70 e0       	ldi	r23, 0x00	; 0
+     b40:	81 e2       	ldi	r24, 0x21	; 33
+     b42:	90 e0       	ldi	r25, 0x00	; 0
+     b44:	55 d5       	rcall	.+2730   	; 0x15f0 <GLCD_Dot>
+     b46:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(33,34);
+     b48:	70 e0       	ldi	r23, 0x00	; 0
+     b4a:	81 e2       	ldi	r24, 0x21	; 33
+     b4c:	90 e0       	ldi	r25, 0x00	; 0
+     b4e:	50 d5       	rcall	.+2720   	; 0x15f0 <GLCD_Dot>
+     b50:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(33,39);
+     b52:	70 e0       	ldi	r23, 0x00	; 0
+     b54:	80 e2       	ldi	r24, 0x20	; 32
+     b56:	90 e0       	ldi	r25, 0x00	; 0
+     b58:	4b d5       	rcall	.+2710   	; 0x15f0 <GLCD_Dot>
+     b5a:	6b e1       	ldi	r22, 0x1B	; 27
+	
+	GLCD_Dot(32,8);
+     b5c:	70 e0       	ldi	r23, 0x00	; 0
+     b5e:	80 e2       	ldi	r24, 0x20	; 32
+     b60:	90 e0       	ldi	r25, 0x00	; 0
+     b62:	46 d5       	rcall	.+2700   	; 0x15f0 <GLCD_Dot>
+     b64:	6c e1       	ldi	r22, 0x1C	; 28
+
+
+	GLCD_Dot(32,27);
+     b66:	70 e0       	ldi	r23, 0x00	; 0
+     b68:	80 e2       	ldi	r24, 0x20	; 32
+     b6a:	90 e0       	ldi	r25, 0x00	; 0
+     b6c:	41 d5       	rcall	.+2690   	; 0x15f0 <GLCD_Dot>
+     b6e:	6d e1       	ldi	r22, 0x1D	; 29
+	GLCD_Dot(32,28);
+     b70:	70 e0       	ldi	r23, 0x00	; 0
+     b72:	80 e2       	ldi	r24, 0x20	; 32
+     b74:	90 e0       	ldi	r25, 0x00	; 0
+     b76:	3c d5       	rcall	.+2680   	; 0x15f0 <GLCD_Dot>
+     b78:	6e e1       	ldi	r22, 0x1E	; 30
+	GLCD_Dot(32,29);
+     b7a:	70 e0       	ldi	r23, 0x00	; 0
+     b7c:	80 e2       	ldi	r24, 0x20	; 32
+     b7e:	90 e0       	ldi	r25, 0x00	; 0
+     b80:	37 d5       	rcall	.+2670   	; 0x15f0 <GLCD_Dot>
+     b82:	6f e1       	ldi	r22, 0x1F	; 31
+	GLCD_Dot(32,30);
+     b84:	70 e0       	ldi	r23, 0x00	; 0
+     b86:	80 e2       	ldi	r24, 0x20	; 32
+     b88:	90 e0       	ldi	r25, 0x00	; 0
+     b8a:	32 d5       	rcall	.+2660   	; 0x15f0 <GLCD_Dot>
+     b8c:	60 e2       	ldi	r22, 0x20	; 32
+	GLCD_Dot(32,31);
+     b8e:	70 e0       	ldi	r23, 0x00	; 0
+     b90:	80 e2       	ldi	r24, 0x20	; 32
+     b92:	90 e0       	ldi	r25, 0x00	; 0
+     b94:	2d d5       	rcall	.+2650   	; 0x15f0 <GLCD_Dot>
+     b96:	61 e2       	ldi	r22, 0x21	; 33
+	GLCD_Dot(32,32);
+     b98:	70 e0       	ldi	r23, 0x00	; 0
+     b9a:	80 e2       	ldi	r24, 0x20	; 32
+     b9c:	90 e0       	ldi	r25, 0x00	; 0
+     b9e:	28 d5       	rcall	.+2640   	; 0x15f0 <GLCD_Dot>
+     ba0:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(32,33);
+     ba2:	70 e0       	ldi	r23, 0x00	; 0
+     ba4:	80 e2       	ldi	r24, 0x20	; 32
+     ba6:	90 e0       	ldi	r25, 0x00	; 0
+     ba8:	23 d5       	rcall	.+2630   	; 0x15f0 <GLCD_Dot>
+     baa:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(32,34);
+     bac:	70 e0       	ldi	r23, 0x00	; 0
+     bae:	80 e2       	ldi	r24, 0x20	; 32
+     bb0:	90 e0       	ldi	r25, 0x00	; 0
+     bb2:	1e d5       	rcall	.+2620   	; 0x15f0 <GLCD_Dot>
+     bb4:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(32,39);
+     bb6:	70 e0       	ldi	r23, 0x00	; 0
+     bb8:	8f e1       	ldi	r24, 0x1F	; 31
+     bba:	90 e0       	ldi	r25, 0x00	; 0
+     bbc:	19 d5       	rcall	.+2610   	; 0x15f0 <GLCD_Dot>
+     bbe:	67 e2       	ldi	r22, 0x27	; 39
+	
+	GLCD_Dot(31,8);
+     bc0:	70 e0       	ldi	r23, 0x00	; 0
+     bc2:	8f e1       	ldi	r24, 0x1F	; 31
+     bc4:	90 e0       	ldi	r25, 0x00	; 0
+     bc6:	14 d5       	rcall	.+2600   	; 0x15f0 <GLCD_Dot>
+     bc8:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(31,39);
+     bca:	70 e0       	ldi	r23, 0x00	; 0
+     bcc:	8e e1       	ldi	r24, 0x1E	; 30
+     bce:	90 e0       	ldi	r25, 0x00	; 0
+     bd0:	0f d5       	rcall	.+2590   	; 0x15f0 <GLCD_Dot>
+     bd2:	6d e1       	ldi	r22, 0x1D	; 29
+	
+	GLCD_Dot(30,8);
+     bd4:	70 e0       	ldi	r23, 0x00	; 0
+     bd6:	8e e1       	ldi	r24, 0x1E	; 30
+     bd8:	90 e0       	ldi	r25, 0x00	; 0
+     bda:	0a d5       	rcall	.+2580   	; 0x15f0 <GLCD_Dot>
+     bdc:	6e e1       	ldi	r22, 0x1E	; 30
+	GLCD_Dot(30,29);
+     bde:	70 e0       	ldi	r23, 0x00	; 0
+     be0:	8e e1       	ldi	r24, 0x1E	; 30
+     be2:	90 e0       	ldi	r25, 0x00	; 0
+     be4:	05 d5       	rcall	.+2570   	; 0x15f0 <GLCD_Dot>
+     be6:	6f e1       	ldi	r22, 0x1F	; 31
+	GLCD_Dot(30,30);
+     be8:	70 e0       	ldi	r23, 0x00	; 0
+     bea:	8e e1       	ldi	r24, 0x1E	; 30
+     bec:	90 e0       	ldi	r25, 0x00	; 0
+     bee:	00 d5       	rcall	.+2560   	; 0x15f0 <GLCD_Dot>
+     bf0:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(30,31);
+     bf2:	70 e0       	ldi	r23, 0x00	; 0
+     bf4:	8e e1       	ldi	r24, 0x1E	; 30
+     bf6:	90 e0       	ldi	r25, 0x00	; 0
+     bf8:	fb d4       	rcall	.+2550   	; 0x15f0 <GLCD_Dot>
+     bfa:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(30,39);
+     bfc:	70 e0       	ldi	r23, 0x00	; 0
+     bfe:	8d e1       	ldi	r24, 0x1D	; 29
+     c00:	90 e0       	ldi	r25, 0x00	; 0
+     c02:	f6 d4       	rcall	.+2540   	; 0x15f0 <GLCD_Dot>
+     c04:	6f e1       	ldi	r22, 0x1F	; 31
+	
+	GLCD_Dot(29,8);
+     c06:	70 e0       	ldi	r23, 0x00	; 0
+     c08:	8d e1       	ldi	r24, 0x1D	; 29
+     c0a:	90 e0       	ldi	r25, 0x00	; 0
+     c0c:	f1 d4       	rcall	.+2530   	; 0x15f0 <GLCD_Dot>
+     c0e:	6e e1       	ldi	r22, 0x1E	; 30
+	GLCD_Dot(29,31);
+     c10:	70 e0       	ldi	r23, 0x00	; 0
+     c12:	8d e1       	ldi	r24, 0x1D	; 29
+     c14:	90 e0       	ldi	r25, 0x00	; 0
+     c16:	ec d4       	rcall	.+2520   	; 0x15f0 <GLCD_Dot>
+     c18:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(29,30);
+     c1a:	70 e0       	ldi	r23, 0x00	; 0
+     c1c:	8d e1       	ldi	r24, 0x1D	; 29
+     c1e:	90 e0       	ldi	r25, 0x00	; 0
+     c20:	e7 d4       	rcall	.+2510   	; 0x15f0 <GLCD_Dot>
+     c22:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(29,39);
+     c24:	70 e0       	ldi	r23, 0x00	; 0
+     c26:	8c e1       	ldi	r24, 0x1C	; 28
+     c28:	90 e0       	ldi	r25, 0x00	; 0
+     c2a:	e2 d4       	rcall	.+2500   	; 0x15f0 <GLCD_Dot>
+     c2c:	60 e1       	ldi	r22, 0x10	; 16
+	
+	GLCD_Dot(28,8);
+     c2e:	70 e0       	ldi	r23, 0x00	; 0
+     c30:	8c e1       	ldi	r24, 0x1C	; 28
+     c32:	90 e0       	ldi	r25, 0x00	; 0
+     c34:	dd d4       	rcall	.+2490   	; 0x15f0 <GLCD_Dot>
+     c36:	61 e1       	ldi	r22, 0x11	; 17
+	GLCD_Dot(28,16);
+     c38:	70 e0       	ldi	r23, 0x00	; 0
+     c3a:	8c e1       	ldi	r24, 0x1C	; 28
+     c3c:	90 e0       	ldi	r25, 0x00	; 0
+     c3e:	d8 d4       	rcall	.+2480   	; 0x15f0 <GLCD_Dot>
+     c40:	62 e1       	ldi	r22, 0x12	; 18
+	GLCD_Dot(28,17);
+     c42:	70 e0       	ldi	r23, 0x00	; 0
+     c44:	8c e1       	ldi	r24, 0x1C	; 28
+     c46:	90 e0       	ldi	r25, 0x00	; 0
+     c48:	d3 d4       	rcall	.+2470   	; 0x15f0 <GLCD_Dot>
+     c4a:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(28,18);
+     c4c:	70 e0       	ldi	r23, 0x00	; 0
+     c4e:	8c e1       	ldi	r24, 0x1C	; 28
+     c50:	90 e0       	ldi	r25, 0x00	; 0
+     c52:	ce d4       	rcall	.+2460   	; 0x15f0 <GLCD_Dot>
+     c54:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(28,39);
+     c56:	70 e0       	ldi	r23, 0x00	; 0
+     c58:	8b e1       	ldi	r24, 0x1B	; 27
+     c5a:	90 e0       	ldi	r25, 0x00	; 0
+     c5c:	c9 d4       	rcall	.+2450   	; 0x15f0 <GLCD_Dot>
+     c5e:	61 e1       	ldi	r22, 0x11	; 17
+	
+	GLCD_Dot(27,8);
+     c60:	70 e0       	ldi	r23, 0x00	; 0
+     c62:	8b e1       	ldi	r24, 0x1B	; 27
+     c64:	90 e0       	ldi	r25, 0x00	; 0
+     c66:	c4 d4       	rcall	.+2440   	; 0x15f0 <GLCD_Dot>
+     c68:	62 e1       	ldi	r22, 0x12	; 18
+	GLCD_Dot(27,17);
+     c6a:	70 e0       	ldi	r23, 0x00	; 0
+     c6c:	8b e1       	ldi	r24, 0x1B	; 27
+     c6e:	90 e0       	ldi	r25, 0x00	; 0
+     c70:	bf d4       	rcall	.+2430   	; 0x15f0 <GLCD_Dot>
+     c72:	67 e2       	ldi	r22, 0x27	; 39
+	GLCD_Dot(27,18);
+     c74:	70 e0       	ldi	r23, 0x00	; 0
+     c76:	8b e1       	ldi	r24, 0x1B	; 27
+     c78:	90 e0       	ldi	r25, 0x00	; 0
+     c7a:	ba d4       	rcall	.+2420   	; 0x15f0 <GLCD_Dot>
+     c7c:	68 e0       	ldi	r22, 0x08	; 8
+	GLCD_Dot(27,39);
+     c7e:	70 e0       	ldi	r23, 0x00	; 0
+     c80:	8a e1       	ldi	r24, 0x1A	; 26
+     c82:	90 e0       	ldi	r25, 0x00	; 0
+     c84:	b5 d4       	rcall	.+2410   	; 0x15f0 <GLCD_Dot>
+     c86:	6a e0       	ldi	r22, 0x0A	; 10
+	
+	GLCD_Dot(26,8);
+     c88:	70 e0       	ldi	r23, 0x00	; 0
+     c8a:	8a e1       	ldi	r24, 0x1A	; 26
+     c8c:	90 e0       	ldi	r25, 0x00	; 0
+     c8e:	b0 d4       	rcall	.+2400   	; 0x15f0 <GLCD_Dot>
+     c90:	6b e0       	ldi	r22, 0x0B	; 11
+	GLCD_Dot(26,10);
+     c92:	70 e0       	ldi	r23, 0x00	; 0
+     c94:	8a e1       	ldi	r24, 0x1A	; 26
+     c96:	90 e0       	ldi	r25, 0x00	; 0
+     c98:	ab d4       	rcall	.+2390   	; 0x15f0 <GLCD_Dot>
+     c9a:	6c e0       	ldi	r22, 0x0C	; 12
+	GLCD_Dot(26,11);
+     c9c:	70 e0       	ldi	r23, 0x00	; 0
+     c9e:	8a e1       	ldi	r24, 0x1A	; 26
+     ca0:	90 e0       	ldi	r25, 0x00	; 0
+     ca2:	a6 d4       	rcall	.+2380   	; 0x15f0 <GLCD_Dot>
+     ca4:	61 e2       	ldi	r22, 0x21	; 33
+	GLCD_Dot(26,12);
+     ca6:	70 e0       	ldi	r23, 0x00	; 0
+     ca8:	8a e1       	ldi	r24, 0x1A	; 26
+     caa:	90 e0       	ldi	r25, 0x00	; 0
+     cac:	a1 d4       	rcall	.+2370   	; 0x15f0 <GLCD_Dot>
+     cae:	62 e2       	ldi	r22, 0x22	; 34
+	GLCD_Dot(26,33);
+     cb0:	70 e0       	ldi	r23, 0x00	; 0
+     cb2:	8a e1       	ldi	r24, 0x1A	; 26
+     cb4:	90 e0       	ldi	r25, 0x00	; 0
+     cb6:	9c d4       	rcall	.+2360   	; 0x15f0 <GLCD_Dot>
+     cb8:	63 e2       	ldi	r22, 0x23	; 35
+     cba:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(26,34);
+     cbc:	8a e1       	ldi	r24, 0x1A	; 26
+     cbe:	90 e0       	ldi	r25, 0x00	; 0
+     cc0:	97 d4       	rcall	.+2350   	; 0x15f0 <GLCD_Dot>
+     cc2:	67 e2       	ldi	r22, 0x27	; 39
+     cc4:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(26,35);
+     cc6:	8a e1       	ldi	r24, 0x1A	; 26
+     cc8:	90 e0       	ldi	r25, 0x00	; 0
+     cca:	92 d4       	rcall	.+2340   	; 0x15f0 <GLCD_Dot>
+     ccc:	67 e0       	ldi	r22, 0x07	; 7
+     cce:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(26,39);
+     cd0:	89 e1       	ldi	r24, 0x19	; 25
+     cd2:	90 e0       	ldi	r25, 0x00	; 0
+     cd4:	8d d4       	rcall	.+2330   	; 0x15f0 <GLCD_Dot>
+     cd6:	68 e0       	ldi	r22, 0x08	; 8
+     cd8:	70 e0       	ldi	r23, 0x00	; 0
+	
+	GLCD_Dot(25,7);
+     cda:	89 e1       	ldi	r24, 0x19	; 25
+     cdc:	90 e0       	ldi	r25, 0x00	; 0
+     cde:	88 d4       	rcall	.+2320   	; 0x15f0 <GLCD_Dot>
+     ce0:	6b e0       	ldi	r22, 0x0B	; 11
+     ce2:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,8);
+     ce4:	89 e1       	ldi	r24, 0x19	; 25
+     ce6:	90 e0       	ldi	r25, 0x00	; 0
+     ce8:	83 d4       	rcall	.+2310   	; 0x15f0 <GLCD_Dot>
+     cea:	6c e0       	ldi	r22, 0x0C	; 12
+     cec:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,11);
+     cee:	89 e1       	ldi	r24, 0x19	; 25
+     cf0:	90 e0       	ldi	r25, 0x00	; 0
+     cf2:	7e d4       	rcall	.+2300   	; 0x15f0 <GLCD_Dot>
+     cf4:	62 e2       	ldi	r22, 0x22	; 34
+     cf6:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,12);
+     cf8:	89 e1       	ldi	r24, 0x19	; 25
+     cfa:	90 e0       	ldi	r25, 0x00	; 0
+     cfc:	79 d4       	rcall	.+2290   	; 0x15f0 <GLCD_Dot>
+     cfe:	63 e2       	ldi	r22, 0x23	; 35
+     d00:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,34);
+     d02:	89 e1       	ldi	r24, 0x19	; 25
+     d04:	90 e0       	ldi	r25, 0x00	; 0
+     d06:	74 d4       	rcall	.+2280   	; 0x15f0 <GLCD_Dot>
+     d08:	67 e2       	ldi	r22, 0x27	; 39
+     d0a:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,35);
+     d0c:	89 e1       	ldi	r24, 0x19	; 25
+     d0e:	90 e0       	ldi	r25, 0x00	; 0
+     d10:	6f d4       	rcall	.+2270   	; 0x15f0 <GLCD_Dot>
+     d12:	68 e2       	ldi	r22, 0x28	; 40
+     d14:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,39);
+     d16:	89 e1       	ldi	r24, 0x19	; 25
+     d18:	90 e0       	ldi	r25, 0x00	; 0
+     d1a:	6a d4       	rcall	.+2260   	; 0x15f0 <GLCD_Dot>
+     d1c:	66 e0       	ldi	r22, 0x06	; 6
+     d1e:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(25,40);
+     d20:	88 e1       	ldi	r24, 0x18	; 24
+     d22:	90 e0       	ldi	r25, 0x00	; 0
+     d24:	65 d4       	rcall	.+2250   	; 0x15f0 <GLCD_Dot>
+     d26:	67 e0       	ldi	r22, 0x07	; 7
+     d28:	70 e0       	ldi	r23, 0x00	; 0
+	
+	GLCD_Dot(24,6);
+     d2a:	88 e1       	ldi	r24, 0x18	; 24
+     d2c:	90 e0       	ldi	r25, 0x00	; 0
+     d2e:	60 d4       	rcall	.+2240   	; 0x15f0 <GLCD_Dot>
+     d30:	68 e0       	ldi	r22, 0x08	; 8
+     d32:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(24,7);
+     d34:	88 e1       	ldi	r24, 0x18	; 24
+     d36:	90 e0       	ldi	r25, 0x00	; 0
+     d38:	5b d4       	rcall	.+2230   	; 0x15f0 <GLCD_Dot>
+     d3a:	67 e2       	ldi	r22, 0x27	; 39
+     d3c:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(24,8);
+     d3e:	88 e1       	ldi	r24, 0x18	; 24
+     d40:	90 e0       	ldi	r25, 0x00	; 0
+     d42:	56 d4       	rcall	.+2220   	; 0x15f0 <GLCD_Dot>
+     d44:	68 e2       	ldi	r22, 0x28	; 40
+     d46:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(24,39);
+     d48:	88 e1       	ldi	r24, 0x18	; 24
+     d4a:	90 e0       	ldi	r25, 0x00	; 0
+     d4c:	51 d4       	rcall	.+2210   	; 0x15f0 <GLCD_Dot>
+     d4e:	69 e2       	ldi	r22, 0x29	; 41
+     d50:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(24,40);
+     d52:	88 e1       	ldi	r24, 0x18	; 24
+     d54:	90 e0       	ldi	r25, 0x00	; 0
+     d56:	4c d4       	rcall	.+2200   	; 0x15f0 <GLCD_Dot>
+     d58:	c5 e0       	ldi	r28, 0x05	; 5
+     d5a:	d0 e0       	ldi	r29, 0x00	; 0
+	GLCD_Dot(24,41);
+     d5c:	be 01       	movw	r22, r28
+     d5e:	87 e1       	ldi	r24, 0x17	; 23
+     d60:	90 e0       	ldi	r25, 0x00	; 0
+     d62:	46 d4       	rcall	.+2188   	; 0x15f0 <GLCD_Dot>
+     d64:	21 96       	adiw	r28, 0x01	; 1
+	
+	for(i=5;i<43;i++)
+     d66:	cb 32       	cpi	r28, 0x2B	; 43
+     d68:	d1 05       	cpc	r29, r1
+	{
+		GLCD_Dot(23,i);
+     d6a:	c1 f7       	brne	.-16     	; 0xd5c <setHouse+0x684>
+     d6c:	c4 e0       	ldi	r28, 0x04	; 4
+     d6e:	d0 e0       	ldi	r29, 0x00	; 0
+     d70:	be 01       	movw	r22, r28
+	GLCD_Dot(24,8);
+	GLCD_Dot(24,39);
+	GLCD_Dot(24,40);
+	GLCD_Dot(24,41);
+	
+	for(i=5;i<43;i++)
+     d72:	86 e1       	ldi	r24, 0x16	; 22
+     d74:	90 e0       	ldi	r25, 0x00	; 0
+     d76:	3c d4       	rcall	.+2168   	; 0x15f0 <GLCD_Dot>
+     d78:	21 96       	adiw	r28, 0x01	; 1
+     d7a:	cc 32       	cpi	r28, 0x2C	; 44
+	{
+		GLCD_Dot(23,i);
+	}
+	for(i=4;i<44;i++)
+	{
+		GLCD_Dot(22,i);
+     d7c:	d1 05       	cpc	r29, r1
+     d7e:	c1 f7       	brne	.-16     	; 0xd70 <setHouse+0x698>
+     d80:	64 e0       	ldi	r22, 0x04	; 4
+     d82:	70 e0       	ldi	r23, 0x00	; 0
+	
+	for(i=5;i<43;i++)
+	{
+		GLCD_Dot(23,i);
+	}
+	for(i=4;i<44;i++)
+     d84:	85 e1       	ldi	r24, 0x15	; 21
+     d86:	90 e0       	ldi	r25, 0x00	; 0
+     d88:	33 d4       	rcall	.+2150   	; 0x15f0 <GLCD_Dot>
+	{
+		GLCD_Dot(22,i);
+	}
+	GLCD_Dot(21,4);
+     d8a:	6b e2       	ldi	r22, 0x2B	; 43
+     d8c:	70 e0       	ldi	r23, 0x00	; 0
+     d8e:	85 e1       	ldi	r24, 0x15	; 21
+     d90:	90 e0       	ldi	r25, 0x00	; 0
+     d92:	2e d4       	rcall	.+2140   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(21,43);
+     d94:	64 e0       	ldi	r22, 0x04	; 4
+     d96:	70 e0       	ldi	r23, 0x00	; 0
+     d98:	84 e1       	ldi	r24, 0x14	; 20
+     d9a:	90 e0       	ldi	r25, 0x00	; 0
+     d9c:	29 d4       	rcall	.+2130   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(20,4);
+     d9e:	6f e0       	ldi	r22, 0x0F	; 15
+     da0:	70 e0       	ldi	r23, 0x00	; 0
+     da2:	84 e1       	ldi	r24, 0x14	; 20
+     da4:	90 e0       	ldi	r25, 0x00	; 0
+     da6:	24 d4       	rcall	.+2120   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,15);
+     da8:	62 e1       	ldi	r22, 0x12	; 18
+     daa:	70 e0       	ldi	r23, 0x00	; 0
+     dac:	84 e1       	ldi	r24, 0x14	; 20
+     dae:	90 e0       	ldi	r25, 0x00	; 0
+     db0:	1f d4       	rcall	.+2110   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,18);
+     db2:	64 e1       	ldi	r22, 0x14	; 20
+     db4:	70 e0       	ldi	r23, 0x00	; 0
+     db6:	84 e1       	ldi	r24, 0x14	; 20
+     db8:	90 e0       	ldi	r25, 0x00	; 0
+     dba:	1a d4       	rcall	.+2100   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,20);
+     dbc:	65 e1       	ldi	r22, 0x15	; 21
+     dbe:	70 e0       	ldi	r23, 0x00	; 0
+     dc0:	84 e1       	ldi	r24, 0x14	; 20
+     dc2:	90 e0       	ldi	r25, 0x00	; 0
+     dc4:	15 d4       	rcall	.+2090   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,21);
+     dc6:	66 e1       	ldi	r22, 0x16	; 22
+     dc8:	70 e0       	ldi	r23, 0x00	; 0
+     dca:	84 e1       	ldi	r24, 0x14	; 20
+     dcc:	90 e0       	ldi	r25, 0x00	; 0
+     dce:	10 d4       	rcall	.+2080   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,22);
+     dd0:	67 e1       	ldi	r22, 0x17	; 23
+     dd2:	70 e0       	ldi	r23, 0x00	; 0
+     dd4:	84 e1       	ldi	r24, 0x14	; 20
+     dd6:	90 e0       	ldi	r25, 0x00	; 0
+     dd8:	0b d4       	rcall	.+2070   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,23);
+     dda:	69 e1       	ldi	r22, 0x19	; 25
+     ddc:	70 e0       	ldi	r23, 0x00	; 0
+     dde:	84 e1       	ldi	r24, 0x14	; 20
+     de0:	90 e0       	ldi	r25, 0x00	; 0
+     de2:	06 d4       	rcall	.+2060   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,25);
+     de4:	6b e1       	ldi	r22, 0x1B	; 27
+     de6:	70 e0       	ldi	r23, 0x00	; 0
+     de8:	84 e1       	ldi	r24, 0x14	; 20
+     dea:	90 e0       	ldi	r25, 0x00	; 0
+     dec:	01 d4       	rcall	.+2050   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,27);
+     dee:	6d e1       	ldi	r22, 0x1D	; 29
+     df0:	70 e0       	ldi	r23, 0x00	; 0
+     df2:	84 e1       	ldi	r24, 0x14	; 20
+     df4:	90 e0       	ldi	r25, 0x00	; 0
+     df6:	fc d3       	rcall	.+2040   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,29);
+     df8:	6f e1       	ldi	r22, 0x1F	; 31
+     dfa:	70 e0       	ldi	r23, 0x00	; 0
+     dfc:	84 e1       	ldi	r24, 0x14	; 20
+     dfe:	90 e0       	ldi	r25, 0x00	; 0
+     e00:	f7 d3       	rcall	.+2030   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,31);
+     e02:	60 e2       	ldi	r22, 0x20	; 32
+     e04:	70 e0       	ldi	r23, 0x00	; 0
+     e06:	84 e1       	ldi	r24, 0x14	; 20
+     e08:	90 e0       	ldi	r25, 0x00	; 0
+     e0a:	f2 d3       	rcall	.+2020   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,32);
+     e0c:	61 e2       	ldi	r22, 0x21	; 33
+     e0e:	70 e0       	ldi	r23, 0x00	; 0
+     e10:	84 e1       	ldi	r24, 0x14	; 20
+     e12:	90 e0       	ldi	r25, 0x00	; 0
+     e14:	ed d3       	rcall	.+2010   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,33);
+     e16:	62 e2       	ldi	r22, 0x22	; 34
+     e18:	70 e0       	ldi	r23, 0x00	; 0
+     e1a:	84 e1       	ldi	r24, 0x14	; 20
+     e1c:	90 e0       	ldi	r25, 0x00	; 0
+     e1e:	e8 d3       	rcall	.+2000   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,34);
+     e20:	6b e2       	ldi	r22, 0x2B	; 43
+     e22:	70 e0       	ldi	r23, 0x00	; 0
+     e24:	84 e1       	ldi	r24, 0x14	; 20
+     e26:	90 e0       	ldi	r25, 0x00	; 0
+     e28:	e3 d3       	rcall	.+1990   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(20,43);
+     e2a:	64 e0       	ldi	r22, 0x04	; 4
+     e2c:	70 e0       	ldi	r23, 0x00	; 0
+     e2e:	83 e1       	ldi	r24, 0x13	; 19
+     e30:	90 e0       	ldi	r25, 0x00	; 0
+     e32:	de d3       	rcall	.+1980   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(19,4);
+     e34:	6f e0       	ldi	r22, 0x0F	; 15
+     e36:	70 e0       	ldi	r23, 0x00	; 0
+     e38:	83 e1       	ldi	r24, 0x13	; 19
+     e3a:	90 e0       	ldi	r25, 0x00	; 0
+     e3c:	d9 d3       	rcall	.+1970   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,15);
+     e3e:	62 e1       	ldi	r22, 0x12	; 18
+     e40:	70 e0       	ldi	r23, 0x00	; 0
+     e42:	83 e1       	ldi	r24, 0x13	; 19
+     e44:	90 e0       	ldi	r25, 0x00	; 0
+     e46:	d4 d3       	rcall	.+1960   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,18);
+     e48:	64 e1       	ldi	r22, 0x14	; 20
+     e4a:	70 e0       	ldi	r23, 0x00	; 0
+     e4c:	83 e1       	ldi	r24, 0x13	; 19
+     e4e:	90 e0       	ldi	r25, 0x00	; 0
+     e50:	cf d3       	rcall	.+1950   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,20);
+     e52:	67 e1       	ldi	r22, 0x17	; 23
+     e54:	70 e0       	ldi	r23, 0x00	; 0
+     e56:	83 e1       	ldi	r24, 0x13	; 19
+     e58:	90 e0       	ldi	r25, 0x00	; 0
+     e5a:	ca d3       	rcall	.+1940   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,23);
+     e5c:	69 e1       	ldi	r22, 0x19	; 25
+     e5e:	70 e0       	ldi	r23, 0x00	; 0
+     e60:	83 e1       	ldi	r24, 0x13	; 19
+     e62:	90 e0       	ldi	r25, 0x00	; 0
+     e64:	c5 d3       	rcall	.+1930   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,25);
+     e66:	6b e1       	ldi	r22, 0x1B	; 27
+     e68:	70 e0       	ldi	r23, 0x00	; 0
+     e6a:	83 e1       	ldi	r24, 0x13	; 19
+     e6c:	90 e0       	ldi	r25, 0x00	; 0
+     e6e:	c0 d3       	rcall	.+1920   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,27);
+     e70:	6d e1       	ldi	r22, 0x1D	; 29
+     e72:	70 e0       	ldi	r23, 0x00	; 0
+     e74:	83 e1       	ldi	r24, 0x13	; 19
+     e76:	90 e0       	ldi	r25, 0x00	; 0
+     e78:	bb d3       	rcall	.+1910   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,29);
+     e7a:	6f e1       	ldi	r22, 0x1F	; 31
+     e7c:	70 e0       	ldi	r23, 0x00	; 0
+     e7e:	83 e1       	ldi	r24, 0x13	; 19
+     e80:	90 e0       	ldi	r25, 0x00	; 0
+     e82:	b6 d3       	rcall	.+1900   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,31);
+     e84:	6b e2       	ldi	r22, 0x2B	; 43
+     e86:	70 e0       	ldi	r23, 0x00	; 0
+     e88:	83 e1       	ldi	r24, 0x13	; 19
+     e8a:	90 e0       	ldi	r25, 0x00	; 0
+     e8c:	b1 d3       	rcall	.+1890   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(19,43);
+     e8e:	64 e0       	ldi	r22, 0x04	; 4
+     e90:	70 e0       	ldi	r23, 0x00	; 0
+     e92:	82 e1       	ldi	r24, 0x12	; 18
+     e94:	90 e0       	ldi	r25, 0x00	; 0
+     e96:	ac d3       	rcall	.+1880   	; 0x15f0 <GLCD_Dot>
+	
+	GLCD_Dot(18,4);
+     e98:	6f e0       	ldi	r22, 0x0F	; 15
+     e9a:	70 e0       	ldi	r23, 0x00	; 0
+     e9c:	82 e1       	ldi	r24, 0x12	; 18
+     e9e:	90 e0       	ldi	r25, 0x00	; 0
+     ea0:	a7 d3       	rcall	.+1870   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,15);
+     ea2:	60 e1       	ldi	r22, 0x10	; 16
+     ea4:	70 e0       	ldi	r23, 0x00	; 0
+     ea6:	82 e1       	ldi	r24, 0x12	; 18
+     ea8:	90 e0       	ldi	r25, 0x00	; 0
+     eaa:	a2 d3       	rcall	.+1860   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,16);
+     eac:	61 e1       	ldi	r22, 0x11	; 17
+     eae:	70 e0       	ldi	r23, 0x00	; 0
+     eb0:	82 e1       	ldi	r24, 0x12	; 18
+     eb2:	90 e0       	ldi	r25, 0x00	; 0
+     eb4:	9d d3       	rcall	.+1850   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,17);
+     eb6:	62 e1       	ldi	r22, 0x12	; 18
+     eb8:	70 e0       	ldi	r23, 0x00	; 0
+     eba:	82 e1       	ldi	r24, 0x12	; 18
+     ebc:	90 e0       	ldi	r25, 0x00	; 0
+     ebe:	98 d3       	rcall	.+1840   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,18);
+     ec0:	64 e1       	ldi	r22, 0x14	; 20
+     ec2:	70 e0       	ldi	r23, 0x00	; 0
+     ec4:	82 e1       	ldi	r24, 0x12	; 18
+     ec6:	90 e0       	ldi	r25, 0x00	; 0
+     ec8:	93 d3       	rcall	.+1830   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,20);
+     eca:	67 e1       	ldi	r22, 0x17	; 23
+     ecc:	70 e0       	ldi	r23, 0x00	; 0
+     ece:	82 e1       	ldi	r24, 0x12	; 18
+     ed0:	90 e0       	ldi	r25, 0x00	; 0
+     ed2:	8e d3       	rcall	.+1820   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,23);
+     ed4:	69 e1       	ldi	r22, 0x19	; 25
+     ed6:	70 e0       	ldi	r23, 0x00	; 0
+     ed8:	82 e1       	ldi	r24, 0x12	; 18
+     eda:	90 e0       	ldi	r25, 0x00	; 0
+     edc:	89 d3       	rcall	.+1810   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,25);
+     ede:	6b e1       	ldi	r22, 0x1B	; 27
+     ee0:	70 e0       	ldi	r23, 0x00	; 0
+     ee2:	82 e1       	ldi	r24, 0x12	; 18
+     ee4:	90 e0       	ldi	r25, 0x00	; 0
+     ee6:	84 d3       	rcall	.+1800   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,27);
+     ee8:	6d e1       	ldi	r22, 0x1D	; 29
+     eea:	70 e0       	ldi	r23, 0x00	; 0
+     eec:	82 e1       	ldi	r24, 0x12	; 18
+     eee:	90 e0       	ldi	r25, 0x00	; 0
+     ef0:	7f d3       	rcall	.+1790   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,29);
+     ef2:	6f e1       	ldi	r22, 0x1F	; 31
+     ef4:	70 e0       	ldi	r23, 0x00	; 0
+     ef6:	82 e1       	ldi	r24, 0x12	; 18
+     ef8:	90 e0       	ldi	r25, 0x00	; 0
+     efa:	7a d3       	rcall	.+1780   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,31);
+     efc:	60 e2       	ldi	r22, 0x20	; 32
+     efe:	70 e0       	ldi	r23, 0x00	; 0
+     f00:	82 e1       	ldi	r24, 0x12	; 18
+     f02:	90 e0       	ldi	r25, 0x00	; 0
+     f04:	75 d3       	rcall	.+1770   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,32);
+     f06:	61 e2       	ldi	r22, 0x21	; 33
+     f08:	70 e0       	ldi	r23, 0x00	; 0
+     f0a:	82 e1       	ldi	r24, 0x12	; 18
+     f0c:	90 e0       	ldi	r25, 0x00	; 0
+     f0e:	70 d3       	rcall	.+1760   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,33);
+     f10:	62 e2       	ldi	r22, 0x22	; 34
+     f12:	70 e0       	ldi	r23, 0x00	; 0
+     f14:	82 e1       	ldi	r24, 0x12	; 18
+     f16:	90 e0       	ldi	r25, 0x00	; 0
+     f18:	6b d3       	rcall	.+1750   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(18,34);
+     f1a:	6b e2       	ldi	r22, 0x2B	; 43
+     f1c:	70 e0       	ldi	r23, 0x00	; 0
+     f1e:	82 e1       	ldi	r24, 0x12	; 18
+     f20:	90 e0       	ldi	r25, 0x00	; 0
+     f22:	66 d3       	rcall	.+1740   	; 0x15f0 <GLCD_Dot>
+     f24:	64 e0       	ldi	r22, 0x04	; 4
+	GLCD_Dot(18,43);
+     f26:	70 e0       	ldi	r23, 0x00	; 0
+     f28:	81 e1       	ldi	r24, 0x11	; 17
+     f2a:	90 e0       	ldi	r25, 0x00	; 0
+     f2c:	61 d3       	rcall	.+1730   	; 0x15f0 <GLCD_Dot>
+     f2e:	6f e0       	ldi	r22, 0x0F	; 15
+	
+	GLCD_Dot(17,4);
+     f30:	70 e0       	ldi	r23, 0x00	; 0
+     f32:	81 e1       	ldi	r24, 0x11	; 17
+     f34:	90 e0       	ldi	r25, 0x00	; 0
+     f36:	5c d3       	rcall	.+1720   	; 0x15f0 <GLCD_Dot>
+     f38:	62 e1       	ldi	r22, 0x12	; 18
+	GLCD_Dot(17,15);
+     f3a:	70 e0       	ldi	r23, 0x00	; 0
+     f3c:	81 e1       	ldi	r24, 0x11	; 17
+     f3e:	90 e0       	ldi	r25, 0x00	; 0
+     f40:	57 d3       	rcall	.+1710   	; 0x15f0 <GLCD_Dot>
+     f42:	64 e1       	ldi	r22, 0x14	; 20
+	GLCD_Dot(17,18);
+     f44:	70 e0       	ldi	r23, 0x00	; 0
+     f46:	81 e1       	ldi	r24, 0x11	; 17
+     f48:	90 e0       	ldi	r25, 0x00	; 0
+     f4a:	52 d3       	rcall	.+1700   	; 0x15f0 <GLCD_Dot>
+     f4c:	67 e1       	ldi	r22, 0x17	; 23
+	GLCD_Dot(17,20);
+     f4e:	70 e0       	ldi	r23, 0x00	; 0
+     f50:	81 e1       	ldi	r24, 0x11	; 17
+     f52:	90 e0       	ldi	r25, 0x00	; 0
+     f54:	4d d3       	rcall	.+1690   	; 0x15f0 <GLCD_Dot>
+     f56:	69 e1       	ldi	r22, 0x19	; 25
+	GLCD_Dot(17,23);
+     f58:	70 e0       	ldi	r23, 0x00	; 0
+     f5a:	81 e1       	ldi	r24, 0x11	; 17
+     f5c:	90 e0       	ldi	r25, 0x00	; 0
+     f5e:	48 d3       	rcall	.+1680   	; 0x15f0 <GLCD_Dot>
+     f60:	6a e1       	ldi	r22, 0x1A	; 26
+	GLCD_Dot(17,25);
+     f62:	70 e0       	ldi	r23, 0x00	; 0
+     f64:	81 e1       	ldi	r24, 0x11	; 17
+     f66:	90 e0       	ldi	r25, 0x00	; 0
+     f68:	43 d3       	rcall	.+1670   	; 0x15f0 <GLCD_Dot>
+     f6a:	6b e1       	ldi	r22, 0x1B	; 27
+	GLCD_Dot(17,26);
+     f6c:	70 e0       	ldi	r23, 0x00	; 0
+     f6e:	81 e1       	ldi	r24, 0x11	; 17
+     f70:	90 e0       	ldi	r25, 0x00	; 0
+     f72:	3e d3       	rcall	.+1660   	; 0x15f0 <GLCD_Dot>
+     f74:	6c e1       	ldi	r22, 0x1C	; 28
+	GLCD_Dot(17,27);
+     f76:	70 e0       	ldi	r23, 0x00	; 0
+     f78:	81 e1       	ldi	r24, 0x11	; 17
+     f7a:	90 e0       	ldi	r25, 0x00	; 0
+     f7c:	39 d3       	rcall	.+1650   	; 0x15f0 <GLCD_Dot>
+     f7e:	6d e1       	ldi	r22, 0x1D	; 29
+	GLCD_Dot(17,28);
+     f80:	70 e0       	ldi	r23, 0x00	; 0
+     f82:	81 e1       	ldi	r24, 0x11	; 17
+     f84:	90 e0       	ldi	r25, 0x00	; 0
+     f86:	34 d3       	rcall	.+1640   	; 0x15f0 <GLCD_Dot>
+     f88:	6f e1       	ldi	r22, 0x1F	; 31
+	GLCD_Dot(17,29);
+     f8a:	70 e0       	ldi	r23, 0x00	; 0
+     f8c:	81 e1       	ldi	r24, 0x11	; 17
+     f8e:	90 e0       	ldi	r25, 0x00	; 0
+     f90:	2f d3       	rcall	.+1630   	; 0x15f0 <GLCD_Dot>
+     f92:	6b e2       	ldi	r22, 0x2B	; 43
+	GLCD_Dot(17,31);
+     f94:	70 e0       	ldi	r23, 0x00	; 0
+     f96:	81 e1       	ldi	r24, 0x11	; 17
+     f98:	90 e0       	ldi	r25, 0x00	; 0
+     f9a:	2a d3       	rcall	.+1620   	; 0x15f0 <GLCD_Dot>
+     f9c:	64 e0       	ldi	r22, 0x04	; 4
+     f9e:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(17,43);
+     fa0:	80 e1       	ldi	r24, 0x10	; 16
+     fa2:	90 e0       	ldi	r25, 0x00	; 0
+     fa4:	25 d3       	rcall	.+1610   	; 0x15f0 <GLCD_Dot>
+     fa6:	6f e0       	ldi	r22, 0x0F	; 15
+     fa8:	70 e0       	ldi	r23, 0x00	; 0
+     faa:	80 e1       	ldi	r24, 0x10	; 16
+	
+	GLCD_Dot(16,4);
+     fac:	90 e0       	ldi	r25, 0x00	; 0
+     fae:	20 d3       	rcall	.+1600   	; 0x15f0 <GLCD_Dot>
+     fb0:	62 e1       	ldi	r22, 0x12	; 18
+     fb2:	70 e0       	ldi	r23, 0x00	; 0
+     fb4:	80 e1       	ldi	r24, 0x10	; 16
+     fb6:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(16,15);
+     fb8:	1b d3       	rcall	.+1590   	; 0x15f0 <GLCD_Dot>
+     fba:	64 e1       	ldi	r22, 0x14	; 20
+     fbc:	70 e0       	ldi	r23, 0x00	; 0
+     fbe:	80 e1       	ldi	r24, 0x10	; 16
+     fc0:	90 e0       	ldi	r25, 0x00	; 0
+     fc2:	16 d3       	rcall	.+1580   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(16,18);
+     fc4:	65 e1       	ldi	r22, 0x15	; 21
+     fc6:	70 e0       	ldi	r23, 0x00	; 0
+     fc8:	80 e1       	ldi	r24, 0x10	; 16
+     fca:	90 e0       	ldi	r25, 0x00	; 0
+     fcc:	11 d3       	rcall	.+1570   	; 0x15f0 <GLCD_Dot>
+     fce:	66 e1       	ldi	r22, 0x16	; 22
+	GLCD_Dot(16,20);
+     fd0:	70 e0       	ldi	r23, 0x00	; 0
+     fd2:	80 e1       	ldi	r24, 0x10	; 16
+     fd4:	90 e0       	ldi	r25, 0x00	; 0
+     fd6:	0c d3       	rcall	.+1560   	; 0x15f0 <GLCD_Dot>
+     fd8:	67 e1       	ldi	r22, 0x17	; 23
+     fda:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(16,21);
+     fdc:	80 e1       	ldi	r24, 0x10	; 16
+     fde:	90 e0       	ldi	r25, 0x00	; 0
+     fe0:	07 d3       	rcall	.+1550   	; 0x15f0 <GLCD_Dot>
+     fe2:	69 e1       	ldi	r22, 0x19	; 25
+     fe4:	70 e0       	ldi	r23, 0x00	; 0
+     fe6:	80 e1       	ldi	r24, 0x10	; 16
+	GLCD_Dot(16,22);
+     fe8:	90 e0       	ldi	r25, 0x00	; 0
+     fea:	02 d3       	rcall	.+1540   	; 0x15f0 <GLCD_Dot>
+     fec:	6a e1       	ldi	r22, 0x1A	; 26
+     fee:	70 e0       	ldi	r23, 0x00	; 0
+     ff0:	80 e1       	ldi	r24, 0x10	; 16
+     ff2:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(16,23);
+     ff4:	fd d2       	rcall	.+1530   	; 0x15f0 <GLCD_Dot>
+     ff6:	6c e1       	ldi	r22, 0x1C	; 28
+     ff8:	70 e0       	ldi	r23, 0x00	; 0
+     ffa:	80 e1       	ldi	r24, 0x10	; 16
+     ffc:	90 e0       	ldi	r25, 0x00	; 0
+     ffe:	f8 d2       	rcall	.+1520   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(16,25);
+    1000:	6d e1       	ldi	r22, 0x1D	; 29
+    1002:	70 e0       	ldi	r23, 0x00	; 0
+    1004:	80 e1       	ldi	r24, 0x10	; 16
+    1006:	90 e0       	ldi	r25, 0x00	; 0
+    1008:	f3 d2       	rcall	.+1510   	; 0x15f0 <GLCD_Dot>
+    100a:	6f e1       	ldi	r22, 0x1F	; 31
+	GLCD_Dot(16,26);
+    100c:	70 e0       	ldi	r23, 0x00	; 0
+    100e:	80 e1       	ldi	r24, 0x10	; 16
+    1010:	90 e0       	ldi	r25, 0x00	; 0
+    1012:	ee d2       	rcall	.+1500   	; 0x15f0 <GLCD_Dot>
+    1014:	60 e2       	ldi	r22, 0x20	; 32
+    1016:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(16,28);
+    1018:	80 e1       	ldi	r24, 0x10	; 16
+    101a:	90 e0       	ldi	r25, 0x00	; 0
+    101c:	e9 d2       	rcall	.+1490   	; 0x15f0 <GLCD_Dot>
+    101e:	61 e2       	ldi	r22, 0x21	; 33
+    1020:	70 e0       	ldi	r23, 0x00	; 0
+    1022:	80 e1       	ldi	r24, 0x10	; 16
+	GLCD_Dot(16,29);
+    1024:	90 e0       	ldi	r25, 0x00	; 0
+    1026:	e4 d2       	rcall	.+1480   	; 0x15f0 <GLCD_Dot>
+    1028:	62 e2       	ldi	r22, 0x22	; 34
+    102a:	70 e0       	ldi	r23, 0x00	; 0
+    102c:	80 e1       	ldi	r24, 0x10	; 16
+    102e:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(16,31);
+    1030:	df d2       	rcall	.+1470   	; 0x15f0 <GLCD_Dot>
+    1032:	6b e2       	ldi	r22, 0x2B	; 43
+    1034:	70 e0       	ldi	r23, 0x00	; 0
+    1036:	80 e1       	ldi	r24, 0x10	; 16
+    1038:	90 e0       	ldi	r25, 0x00	; 0
+    103a:	da d2       	rcall	.+1460   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(16,32);
+    103c:	64 e0       	ldi	r22, 0x04	; 4
+    103e:	70 e0       	ldi	r23, 0x00	; 0
+    1040:	8f e0       	ldi	r24, 0x0F	; 15
+    1042:	90 e0       	ldi	r25, 0x00	; 0
+    1044:	d5 d2       	rcall	.+1450   	; 0x15f0 <GLCD_Dot>
+    1046:	6b e2       	ldi	r22, 0x2B	; 43
+	GLCD_Dot(16,33);
+    1048:	70 e0       	ldi	r23, 0x00	; 0
+    104a:	8f e0       	ldi	r24, 0x0F	; 15
+    104c:	90 e0       	ldi	r25, 0x00	; 0
+    104e:	d0 d2       	rcall	.+1440   	; 0x15f0 <GLCD_Dot>
+    1050:	c4 e0       	ldi	r28, 0x04	; 4
+    1052:	d0 e0       	ldi	r29, 0x00	; 0
+	GLCD_Dot(16,34);
+    1054:	be 01       	movw	r22, r28
+    1056:	8e e0       	ldi	r24, 0x0E	; 14
+    1058:	90 e0       	ldi	r25, 0x00	; 0
+    105a:	ca d2       	rcall	.+1428   	; 0x15f0 <GLCD_Dot>
+    105c:	21 96       	adiw	r28, 0x01	; 1
+    105e:	cc 32       	cpi	r28, 0x2C	; 44
+	GLCD_Dot(16,43);
+    1060:	d1 05       	cpc	r29, r1
+    1062:	c1 f7       	brne	.-16     	; 0x1054 <setHouse+0x97c>
+    1064:	6c e1       	ldi	r22, 0x1C	; 28
+    1066:	70 e0       	ldi	r23, 0x00	; 0
+    1068:	8d e0       	ldi	r24, 0x0D	; 13
+    106a:	90 e0       	ldi	r25, 0x00	; 0
+	
+	GLCD_Dot(15,4);
+    106c:	c1 d2       	rcall	.+1410   	; 0x15f0 <GLCD_Dot>
+    106e:	6d e1       	ldi	r22, 0x1D	; 29
+    1070:	70 e0       	ldi	r23, 0x00	; 0
+    1072:	8d e0       	ldi	r24, 0x0D	; 13
+    1074:	90 e0       	ldi	r25, 0x00	; 0
+    1076:	bc d2       	rcall	.+1400   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(15,43);
+    1078:	65 e2       	ldi	r22, 0x25	; 37
+    107a:	70 e0       	ldi	r23, 0x00	; 0
+    107c:	8d e0       	ldi	r24, 0x0D	; 13
+    107e:	90 e0       	ldi	r25, 0x00	; 0
+    1080:	b7 d2       	rcall	.+1390   	; 0x15f0 <GLCD_Dot>
+    1082:	66 e2       	ldi	r22, 0x26	; 38
+	
+	for(i=4;i<44;i++)
+    1084:	70 e0       	ldi	r23, 0x00	; 0
+    1086:	8d e0       	ldi	r24, 0x0D	; 13
+	{
+		GLCD_Dot(14,i);
+    1088:	90 e0       	ldi	r25, 0x00	; 0
+    108a:	b2 d2       	rcall	.+1380   	; 0x15f0 <GLCD_Dot>
+    108c:	6d e1       	ldi	r22, 0x1D	; 29
+    108e:	70 e0       	ldi	r23, 0x00	; 0
+    1090:	8c e0       	ldi	r24, 0x0C	; 12
+	GLCD_Dot(16,43);
+	
+	GLCD_Dot(15,4);
+	GLCD_Dot(15,43);
+	
+	for(i=4;i<44;i++)
+    1092:	90 e0       	ldi	r25, 0x00	; 0
+    1094:	ad d2       	rcall	.+1370   	; 0x15f0 <GLCD_Dot>
+    1096:	65 e2       	ldi	r22, 0x25	; 37
+    1098:	70 e0       	ldi	r23, 0x00	; 0
+	{
+		GLCD_Dot(14,i);
+	}
+	
+	GLCD_Dot(13,28);
+    109a:	8c e0       	ldi	r24, 0x0C	; 12
+    109c:	90 e0       	ldi	r25, 0x00	; 0
+    109e:	a8 d2       	rcall	.+1360   	; 0x15f0 <GLCD_Dot>
+    10a0:	6d e1       	ldi	r22, 0x1D	; 29
+    10a2:	70 e0       	ldi	r23, 0x00	; 0
+    10a4:	8b e0       	ldi	r24, 0x0B	; 11
+	GLCD_Dot(13,29);
+    10a6:	90 e0       	ldi	r25, 0x00	; 0
+    10a8:	a3 d2       	rcall	.+1350   	; 0x15f0 <GLCD_Dot>
+    10aa:	65 e2       	ldi	r22, 0x25	; 37
+    10ac:	70 e0       	ldi	r23, 0x00	; 0
+    10ae:	8b e0       	ldi	r24, 0x0B	; 11
+    10b0:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(13,37);
+    10b2:	9e d2       	rcall	.+1340   	; 0x15f0 <GLCD_Dot>
+    10b4:	cd e1       	ldi	r28, 0x1D	; 29
+    10b6:	d0 e0       	ldi	r29, 0x00	; 0
+    10b8:	be 01       	movw	r22, r28
+    10ba:	8a e0       	ldi	r24, 0x0A	; 10
+    10bc:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(13,38);
+    10be:	98 d2       	rcall	.+1328   	; 0x15f0 <GLCD_Dot>
+    10c0:	21 96       	adiw	r28, 0x01	; 1
+    10c2:	c6 32       	cpi	r28, 0x26	; 38
+    10c4:	d1 05       	cpc	r29, r1
+    10c6:	c1 f7       	brne	.-16     	; 0x10b8 <setHouse+0x9e0>
+    10c8:	6d e1       	ldi	r22, 0x1D	; 29
+	
+	GLCD_Dot(12,29);
+    10ca:	70 e0       	ldi	r23, 0x00	; 0
+    10cc:	89 e0       	ldi	r24, 0x09	; 9
+    10ce:	90 e0       	ldi	r25, 0x00	; 0
+    10d0:	8f d2       	rcall	.+1310   	; 0x15f0 <GLCD_Dot>
+    10d2:	65 e2       	ldi	r22, 0x25	; 37
+    10d4:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(12,37);
+    10d6:	89 e0       	ldi	r24, 0x09	; 9
+    10d8:	90 e0       	ldi	r25, 0x00	; 0
+    10da:	8a d2       	rcall	.+1300   	; 0x15f0 <GLCD_Dot>
+    10dc:	cd e1       	ldi	r28, 0x1D	; 29
+    10de:	d0 e0       	ldi	r29, 0x00	; 0
+    10e0:	be 01       	movw	r22, r28
+	
+	GLCD_Dot(11,29);
+    10e2:	88 e0       	ldi	r24, 0x08	; 8
+    10e4:	90 e0       	ldi	r25, 0x00	; 0
+    10e6:	84 d2       	rcall	.+1288   	; 0x15f0 <GLCD_Dot>
+    10e8:	21 96       	adiw	r28, 0x01	; 1
+    10ea:	c6 32       	cpi	r28, 0x26	; 38
+    10ec:	d1 05       	cpc	r29, r1
+	GLCD_Dot(11,37);
+    10ee:	c1 f7       	brne	.-16     	; 0x10e0 <setHouse+0xa08>
+    10f0:	df 91       	pop	r29
+    10f2:	cf 91       	pop	r28
+    10f4:	08 95       	ret
+
+000010f6 <setplayer>:
+    10f6:	62 e3       	ldi	r22, 0x32	; 50
+    10f8:	70 e0       	ldi	r23, 0x00	; 0
+	
+	for(i=29; i<38;i++)
+    10fa:	8f e3       	ldi	r24, 0x3F	; 63
+    10fc:	90 e0       	ldi	r25, 0x00	; 0
+	{
+		GLCD_Dot(10,i);
+    10fe:	78 d2       	rcall	.+1264   	; 0x15f0 <GLCD_Dot>
+    1100:	63 e3       	ldi	r22, 0x33	; 51
+    1102:	70 e0       	ldi	r23, 0x00	; 0
+    1104:	8f e3       	ldi	r24, 0x3F	; 63
+    1106:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(12,37);
+	
+	GLCD_Dot(11,29);
+	GLCD_Dot(11,37);
+	
+	for(i=29; i<38;i++)
+    1108:	73 d2       	rcall	.+1254   	; 0x15f0 <GLCD_Dot>
+    110a:	67 e3       	ldi	r22, 0x37	; 55
+    110c:	70 e0       	ldi	r23, 0x00	; 0
+    110e:	8f e3       	ldi	r24, 0x3F	; 63
+	{
+		GLCD_Dot(10,i);
+	}
+	GLCD_Dot(9,29);
+    1110:	90 e0       	ldi	r25, 0x00	; 0
+    1112:	6e d2       	rcall	.+1244   	; 0x15f0 <GLCD_Dot>
+    1114:	68 e3       	ldi	r22, 0x38	; 56
+    1116:	70 e0       	ldi	r23, 0x00	; 0
+    1118:	8f e3       	ldi	r24, 0x3F	; 63
+    111a:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(9,37);
+    111c:	69 d2       	rcall	.+1234   	; 0x15f0 <GLCD_Dot>
+    111e:	6e e4       	ldi	r22, 0x4E	; 78
+    1120:	70 e0       	ldi	r23, 0x00	; 0
+    1122:	8f e3       	ldi	r24, 0x3F	; 63
+    1124:	90 e0       	ldi	r25, 0x00	; 0
+    1126:	64 d2       	rcall	.+1224   	; 0x15f0 <GLCD_Dot>
+	for(i=29; i<38;i++)
+    1128:	60 e5       	ldi	r22, 0x50	; 80
+    112a:	70 e0       	ldi	r23, 0x00	; 0
+	{
+		GLCD_Dot(8,i);
+    112c:	8f e3       	ldi	r24, 0x3F	; 63
+    112e:	90 e0       	ldi	r25, 0x00	; 0
+    1130:	5f d2       	rcall	.+1214   	; 0x15f0 <GLCD_Dot>
+    1132:	62 e5       	ldi	r22, 0x52	; 82
+    1134:	70 e0       	ldi	r23, 0x00	; 0
+	{
+		GLCD_Dot(10,i);
+	}
+	GLCD_Dot(9,29);
+	GLCD_Dot(9,37);
+	for(i=29; i<38;i++)
+    1136:	8f e3       	ldi	r24, 0x3F	; 63
+    1138:	90 e0       	ldi	r25, 0x00	; 0
+    113a:	5a d2       	rcall	.+1204   	; 0x15f0 <GLCD_Dot>
+    113c:	66 e5       	ldi	r22, 0x56	; 86
+	{
+		GLCD_Dot(8,i);
+	}
+	
+}
+    113e:	70 e0       	ldi	r23, 0x00	; 0
+    1140:	8f e3       	ldi	r24, 0x3F	; 63
+    1142:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(63,55);
+	GLCD_Dot(63,56);
+	GLCD_Dot(63,78);
+	GLCD_Dot(63,80);
+	GLCD_Dot(63,82);
+	GLCD_Dot(63,86);
+    1144:	55 d2       	rcall	.+1194   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(63,87);
+    1146:	67 e5       	ldi	r22, 0x57	; 87
+    1148:	70 e0       	ldi	r23, 0x00	; 0
+    114a:	8f e3       	ldi	r24, 0x3F	; 63
+    114c:	90 e0       	ldi	r25, 0x00	; 0
+    114e:	50 d2       	rcall	.+1184   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,50);
+    1150:	62 e3       	ldi	r22, 0x32	; 50
+    1152:	70 e0       	ldi	r23, 0x00	; 0
+    1154:	8e e3       	ldi	r24, 0x3E	; 62
+    1156:	90 e0       	ldi	r25, 0x00	; 0
+    1158:	4b d2       	rcall	.+1174   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,51);
+    115a:	63 e3       	ldi	r22, 0x33	; 51
+    115c:	70 e0       	ldi	r23, 0x00	; 0
+    115e:	8e e3       	ldi	r24, 0x3E	; 62
+    1160:	90 e0       	ldi	r25, 0x00	; 0
+    1162:	46 d2       	rcall	.+1164   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,56);
+    1164:	68 e3       	ldi	r22, 0x38	; 56
+    1166:	70 e0       	ldi	r23, 0x00	; 0
+    1168:	8e e3       	ldi	r24, 0x3E	; 62
+    116a:	90 e0       	ldi	r25, 0x00	; 0
+    116c:	41 d2       	rcall	.+1154   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,57);
+    116e:	69 e3       	ldi	r22, 0x39	; 57
+    1170:	70 e0       	ldi	r23, 0x00	; 0
+    1172:	8e e3       	ldi	r24, 0x3E	; 62
+    1174:	90 e0       	ldi	r25, 0x00	; 0
+    1176:	3c d2       	rcall	.+1144   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,79);
+    1178:	6f e4       	ldi	r22, 0x4F	; 79
+    117a:	70 e0       	ldi	r23, 0x00	; 0
+    117c:	8e e3       	ldi	r24, 0x3E	; 62
+    117e:	90 e0       	ldi	r25, 0x00	; 0
+    1180:	37 d2       	rcall	.+1134   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,80);
+    1182:	60 e5       	ldi	r22, 0x50	; 80
+    1184:	70 e0       	ldi	r23, 0x00	; 0
+    1186:	8e e3       	ldi	r24, 0x3E	; 62
+    1188:	90 e0       	ldi	r25, 0x00	; 0
+    118a:	32 d2       	rcall	.+1124   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,82);
+    118c:	62 e5       	ldi	r22, 0x52	; 82
+    118e:	70 e0       	ldi	r23, 0x00	; 0
+    1190:	8e e3       	ldi	r24, 0x3E	; 62
+    1192:	90 e0       	ldi	r25, 0x00	; 0
+    1194:	2d d2       	rcall	.+1114   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,83);
+    1196:	63 e5       	ldi	r22, 0x53	; 83
+    1198:	70 e0       	ldi	r23, 0x00	; 0
+    119a:	8e e3       	ldi	r24, 0x3E	; 62
+    119c:	90 e0       	ldi	r25, 0x00	; 0
+    119e:	28 d2       	rcall	.+1104   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,85);
+    11a0:	65 e5       	ldi	r22, 0x55	; 85
+    11a2:	70 e0       	ldi	r23, 0x00	; 0
+    11a4:	8e e3       	ldi	r24, 0x3E	; 62
+    11a6:	90 e0       	ldi	r25, 0x00	; 0
+    11a8:	23 d2       	rcall	.+1094   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(62,86);
+    11aa:	66 e5       	ldi	r22, 0x56	; 86
+    11ac:	70 e0       	ldi	r23, 0x00	; 0
+    11ae:	8e e3       	ldi	r24, 0x3E	; 62
+    11b0:	90 e0       	ldi	r25, 0x00	; 0
+    11b2:	1e d2       	rcall	.+1084   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,50);
+    11b4:	62 e3       	ldi	r22, 0x32	; 50
+    11b6:	70 e0       	ldi	r23, 0x00	; 0
+    11b8:	8d e3       	ldi	r24, 0x3D	; 61
+    11ba:	90 e0       	ldi	r25, 0x00	; 0
+    11bc:	19 d2       	rcall	.+1074   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,51);
+    11be:	63 e3       	ldi	r22, 0x33	; 51
+    11c0:	70 e0       	ldi	r23, 0x00	; 0
+    11c2:	8d e3       	ldi	r24, 0x3D	; 61
+    11c4:	90 e0       	ldi	r25, 0x00	; 0
+    11c6:	14 d2       	rcall	.+1064   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,52);
+    11c8:	64 e3       	ldi	r22, 0x34	; 52
+    11ca:	70 e0       	ldi	r23, 0x00	; 0
+    11cc:	8d e3       	ldi	r24, 0x3D	; 61
+    11ce:	90 e0       	ldi	r25, 0x00	; 0
+    11d0:	0f d2       	rcall	.+1054   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,57);
+    11d2:	69 e3       	ldi	r22, 0x39	; 57
+    11d4:	70 e0       	ldi	r23, 0x00	; 0
+    11d6:	8d e3       	ldi	r24, 0x3D	; 61
+    11d8:	90 e0       	ldi	r25, 0x00	; 0
+    11da:	0a d2       	rcall	.+1044   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,58);
+    11dc:	6a e3       	ldi	r22, 0x3A	; 58
+    11de:	70 e0       	ldi	r23, 0x00	; 0
+    11e0:	8d e3       	ldi	r24, 0x3D	; 61
+    11e2:	90 e0       	ldi	r25, 0x00	; 0
+    11e4:	05 d2       	rcall	.+1034   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,79);
+    11e6:	6f e4       	ldi	r22, 0x4F	; 79
+    11e8:	70 e0       	ldi	r23, 0x00	; 0
+    11ea:	8d e3       	ldi	r24, 0x3D	; 61
+    11ec:	90 e0       	ldi	r25, 0x00	; 0
+    11ee:	00 d2       	rcall	.+1024   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,80);
+    11f0:	60 e5       	ldi	r22, 0x50	; 80
+    11f2:	70 e0       	ldi	r23, 0x00	; 0
+    11f4:	8d e3       	ldi	r24, 0x3D	; 61
+    11f6:	90 e0       	ldi	r25, 0x00	; 0
+    11f8:	fb d1       	rcall	.+1014   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,81);
+    11fa:	61 e5       	ldi	r22, 0x51	; 81
+    11fc:	70 e0       	ldi	r23, 0x00	; 0
+    11fe:	8d e3       	ldi	r24, 0x3D	; 61
+    1200:	90 e0       	ldi	r25, 0x00	; 0
+    1202:	f6 d1       	rcall	.+1004   	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,82);
+    1204:	62 e5       	ldi	r22, 0x52	; 82
+    1206:	70 e0       	ldi	r23, 0x00	; 0
+    1208:	8d e3       	ldi	r24, 0x3D	; 61
+    120a:	90 e0       	ldi	r25, 0x00	; 0
+    120c:	f1 d1       	rcall	.+994    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,83);
+    120e:	63 e5       	ldi	r22, 0x53	; 83
+    1210:	70 e0       	ldi	r23, 0x00	; 0
+    1212:	8d e3       	ldi	r24, 0x3D	; 61
+    1214:	90 e0       	ldi	r25, 0x00	; 0
+    1216:	ec d1       	rcall	.+984    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(61,85);
+    1218:	65 e5       	ldi	r22, 0x55	; 85
+    121a:	70 e0       	ldi	r23, 0x00	; 0
+    121c:	8d e3       	ldi	r24, 0x3D	; 61
+    121e:	90 e0       	ldi	r25, 0x00	; 0
+    1220:	e7 d1       	rcall	.+974    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,51);
+    1222:	63 e3       	ldi	r22, 0x33	; 51
+    1224:	70 e0       	ldi	r23, 0x00	; 0
+    1226:	8c e3       	ldi	r24, 0x3C	; 60
+    1228:	90 e0       	ldi	r25, 0x00	; 0
+    122a:	e2 d1       	rcall	.+964    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,52);
+    122c:	64 e3       	ldi	r22, 0x34	; 52
+    122e:	70 e0       	ldi	r23, 0x00	; 0
+    1230:	8c e3       	ldi	r24, 0x3C	; 60
+    1232:	90 e0       	ldi	r25, 0x00	; 0
+    1234:	dd d1       	rcall	.+954    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,58);
+    1236:	6a e3       	ldi	r22, 0x3A	; 58
+    1238:	70 e0       	ldi	r23, 0x00	; 0
+    123a:	8c e3       	ldi	r24, 0x3C	; 60
+    123c:	90 e0       	ldi	r25, 0x00	; 0
+    123e:	d8 d1       	rcall	.+944    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,78);
+    1240:	6e e4       	ldi	r22, 0x4E	; 78
+    1242:	70 e0       	ldi	r23, 0x00	; 0
+    1244:	8c e3       	ldi	r24, 0x3C	; 60
+    1246:	90 e0       	ldi	r25, 0x00	; 0
+    1248:	d3 d1       	rcall	.+934    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,79);
+    124a:	6f e4       	ldi	r22, 0x4F	; 79
+    124c:	70 e0       	ldi	r23, 0x00	; 0
+    124e:	8c e3       	ldi	r24, 0x3C	; 60
+    1250:	90 e0       	ldi	r25, 0x00	; 0
+    1252:	ce d1       	rcall	.+924    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,80);
+    1254:	60 e5       	ldi	r22, 0x50	; 80
+    1256:	70 e0       	ldi	r23, 0x00	; 0
+    1258:	8c e3       	ldi	r24, 0x3C	; 60
+    125a:	90 e0       	ldi	r25, 0x00	; 0
+    125c:	c9 d1       	rcall	.+914    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,81);
+    125e:	61 e5       	ldi	r22, 0x51	; 81
+    1260:	70 e0       	ldi	r23, 0x00	; 0
+    1262:	8c e3       	ldi	r24, 0x3C	; 60
+    1264:	90 e0       	ldi	r25, 0x00	; 0
+    1266:	c4 d1       	rcall	.+904    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,82);
+    1268:	62 e5       	ldi	r22, 0x52	; 82
+    126a:	70 e0       	ldi	r23, 0x00	; 0
+    126c:	8c e3       	ldi	r24, 0x3C	; 60
+    126e:	90 e0       	ldi	r25, 0x00	; 0
+    1270:	bf d1       	rcall	.+894    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,83);
+    1272:	63 e5       	ldi	r22, 0x53	; 83
+    1274:	70 e0       	ldi	r23, 0x00	; 0
+    1276:	8c e3       	ldi	r24, 0x3C	; 60
+    1278:	90 e0       	ldi	r25, 0x00	; 0
+    127a:	ba d1       	rcall	.+884    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,84);
+    127c:	64 e5       	ldi	r22, 0x54	; 84
+    127e:	70 e0       	ldi	r23, 0x00	; 0
+    1280:	8c e3       	ldi	r24, 0x3C	; 60
+    1282:	90 e0       	ldi	r25, 0x00	; 0
+    1284:	b5 d1       	rcall	.+874    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(60,85);
+    1286:	65 e5       	ldi	r22, 0x55	; 85
+    1288:	70 e0       	ldi	r23, 0x00	; 0
+    128a:	8c e3       	ldi	r24, 0x3C	; 60
+    128c:	90 e0       	ldi	r25, 0x00	; 0
+    128e:	b0 d1       	rcall	.+864    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,51);
+    1290:	63 e3       	ldi	r22, 0x33	; 51
+    1292:	70 e0       	ldi	r23, 0x00	; 0
+    1294:	8b e3       	ldi	r24, 0x3B	; 59
+    1296:	90 e0       	ldi	r25, 0x00	; 0
+    1298:	ab d1       	rcall	.+854    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,52);
+    129a:	64 e3       	ldi	r22, 0x34	; 52
+    129c:	70 e0       	ldi	r23, 0x00	; 0
+    129e:	8b e3       	ldi	r24, 0x3B	; 59
+    12a0:	90 e0       	ldi	r25, 0x00	; 0
+    12a2:	a6 d1       	rcall	.+844    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,53);
+    12a4:	65 e3       	ldi	r22, 0x35	; 53
+    12a6:	70 e0       	ldi	r23, 0x00	; 0
+    12a8:	8b e3       	ldi	r24, 0x3B	; 59
+    12aa:	90 e0       	ldi	r25, 0x00	; 0
+    12ac:	a1 d1       	rcall	.+834    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,54);
+    12ae:	66 e3       	ldi	r22, 0x36	; 54
+    12b0:	70 e0       	ldi	r23, 0x00	; 0
+    12b2:	8b e3       	ldi	r24, 0x3B	; 59
+    12b4:	90 e0       	ldi	r25, 0x00	; 0
+    12b6:	9c d1       	rcall	.+824    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,58);
+    12b8:	6a e3       	ldi	r22, 0x3A	; 58
+    12ba:	70 e0       	ldi	r23, 0x00	; 0
+    12bc:	8b e3       	ldi	r24, 0x3B	; 59
+    12be:	90 e0       	ldi	r25, 0x00	; 0
+    12c0:	97 d1       	rcall	.+814    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,78);
+    12c2:	6e e4       	ldi	r22, 0x4E	; 78
+    12c4:	70 e0       	ldi	r23, 0x00	; 0
+    12c6:	8b e3       	ldi	r24, 0x3B	; 59
+    12c8:	90 e0       	ldi	r25, 0x00	; 0
+    12ca:	92 d1       	rcall	.+804    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,80);
+    12cc:	60 e5       	ldi	r22, 0x50	; 80
+    12ce:	70 e0       	ldi	r23, 0x00	; 0
+    12d0:	8b e3       	ldi	r24, 0x3B	; 59
+    12d2:	90 e0       	ldi	r25, 0x00	; 0
+    12d4:	8d d1       	rcall	.+794    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,81);
+    12d6:	61 e5       	ldi	r22, 0x51	; 81
+    12d8:	70 e0       	ldi	r23, 0x00	; 0
+    12da:	8b e3       	ldi	r24, 0x3B	; 59
+    12dc:	90 e0       	ldi	r25, 0x00	; 0
+    12de:	88 d1       	rcall	.+784    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,82);
+    12e0:	62 e5       	ldi	r22, 0x52	; 82
+    12e2:	70 e0       	ldi	r23, 0x00	; 0
+    12e4:	8b e3       	ldi	r24, 0x3B	; 59
+    12e6:	90 e0       	ldi	r25, 0x00	; 0
+    12e8:	83 d1       	rcall	.+774    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(59,84);
+    12ea:	64 e5       	ldi	r22, 0x54	; 84
+    12ec:	70 e0       	ldi	r23, 0x00	; 0
+    12ee:	8b e3       	ldi	r24, 0x3B	; 59
+    12f0:	90 e0       	ldi	r25, 0x00	; 0
+    12f2:	7e d1       	rcall	.+764    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,52);
+    12f4:	64 e3       	ldi	r22, 0x34	; 52
+    12f6:	70 e0       	ldi	r23, 0x00	; 0
+    12f8:	8a e3       	ldi	r24, 0x3A	; 58
+    12fa:	90 e0       	ldi	r25, 0x00	; 0
+    12fc:	79 d1       	rcall	.+754    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,53);
+    12fe:	65 e3       	ldi	r22, 0x35	; 53
+    1300:	70 e0       	ldi	r23, 0x00	; 0
+    1302:	8a e3       	ldi	r24, 0x3A	; 58
+    1304:	90 e0       	ldi	r25, 0x00	; 0
+    1306:	74 d1       	rcall	.+744    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,54);
+    1308:	66 e3       	ldi	r22, 0x36	; 54
+    130a:	70 e0       	ldi	r23, 0x00	; 0
+    130c:	8a e3       	ldi	r24, 0x3A	; 58
+    130e:	90 e0       	ldi	r25, 0x00	; 0
+    1310:	6f d1       	rcall	.+734    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,55);
+    1312:	67 e3       	ldi	r22, 0x37	; 55
+    1314:	70 e0       	ldi	r23, 0x00	; 0
+    1316:	8a e3       	ldi	r24, 0x3A	; 58
+    1318:	90 e0       	ldi	r25, 0x00	; 0
+    131a:	6a d1       	rcall	.+724    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,56);
+    131c:	68 e3       	ldi	r22, 0x38	; 56
+    131e:	70 e0       	ldi	r23, 0x00	; 0
+    1320:	8a e3       	ldi	r24, 0x3A	; 58
+    1322:	90 e0       	ldi	r25, 0x00	; 0
+    1324:	65 d1       	rcall	.+714    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,57);
+    1326:	69 e3       	ldi	r22, 0x39	; 57
+    1328:	70 e0       	ldi	r23, 0x00	; 0
+    132a:	8a e3       	ldi	r24, 0x3A	; 58
+    132c:	90 e0       	ldi	r25, 0x00	; 0
+    132e:	60 d1       	rcall	.+704    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,58);
+    1330:	6a e3       	ldi	r22, 0x3A	; 58
+    1332:	70 e0       	ldi	r23, 0x00	; 0
+    1334:	8a e3       	ldi	r24, 0x3A	; 58
+    1336:	90 e0       	ldi	r25, 0x00	; 0
+    1338:	5b d1       	rcall	.+694    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,78);
+    133a:	6e e4       	ldi	r22, 0x4E	; 78
+    133c:	70 e0       	ldi	r23, 0x00	; 0
+    133e:	8a e3       	ldi	r24, 0x3A	; 58
+    1340:	90 e0       	ldi	r25, 0x00	; 0
+    1342:	56 d1       	rcall	.+684    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,79);
+    1344:	6f e4       	ldi	r22, 0x4F	; 79
+    1346:	70 e0       	ldi	r23, 0x00	; 0
+    1348:	8a e3       	ldi	r24, 0x3A	; 58
+    134a:	90 e0       	ldi	r25, 0x00	; 0
+    134c:	51 d1       	rcall	.+674    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,80);
+    134e:	60 e5       	ldi	r22, 0x50	; 80
+    1350:	70 e0       	ldi	r23, 0x00	; 0
+    1352:	8a e3       	ldi	r24, 0x3A	; 58
+    1354:	90 e0       	ldi	r25, 0x00	; 0
+    1356:	4c d1       	rcall	.+664    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,82);
+    1358:	62 e5       	ldi	r22, 0x52	; 82
+    135a:	70 e0       	ldi	r23, 0x00	; 0
+    135c:	8a e3       	ldi	r24, 0x3A	; 58
+    135e:	90 e0       	ldi	r25, 0x00	; 0
+    1360:	47 d1       	rcall	.+654    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,83);
+    1362:	63 e5       	ldi	r22, 0x53	; 83
+    1364:	70 e0       	ldi	r23, 0x00	; 0
+    1366:	8a e3       	ldi	r24, 0x3A	; 58
+    1368:	90 e0       	ldi	r25, 0x00	; 0
+    136a:	42 d1       	rcall	.+644    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(58,84);
+    136c:	64 e5       	ldi	r22, 0x54	; 84
+    136e:	70 e0       	ldi	r23, 0x00	; 0
+    1370:	8a e3       	ldi	r24, 0x3A	; 58
+    1372:	90 e0       	ldi	r25, 0x00	; 0
+    1374:	3d d1       	rcall	.+634    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,53);
+    1376:	65 e3       	ldi	r22, 0x35	; 53
+    1378:	70 e0       	ldi	r23, 0x00	; 0
+    137a:	89 e3       	ldi	r24, 0x39	; 57
+    137c:	90 e0       	ldi	r25, 0x00	; 0
+    137e:	38 d1       	rcall	.+624    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,54);
+    1380:	66 e3       	ldi	r22, 0x36	; 54
+    1382:	70 e0       	ldi	r23, 0x00	; 0
+    1384:	89 e3       	ldi	r24, 0x39	; 57
+    1386:	90 e0       	ldi	r25, 0x00	; 0
+    1388:	33 d1       	rcall	.+614    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,55);
+    138a:	67 e3       	ldi	r22, 0x37	; 55
+    138c:	70 e0       	ldi	r23, 0x00	; 0
+    138e:	89 e3       	ldi	r24, 0x39	; 57
+    1390:	90 e0       	ldi	r25, 0x00	; 0
+    1392:	2e d1       	rcall	.+604    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,56);
+    1394:	68 e3       	ldi	r22, 0x38	; 56
+    1396:	70 e0       	ldi	r23, 0x00	; 0
+    1398:	89 e3       	ldi	r24, 0x39	; 57
+    139a:	90 e0       	ldi	r25, 0x00	; 0
+    139c:	29 d1       	rcall	.+594    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,57);
+    139e:	69 e3       	ldi	r22, 0x39	; 57
+    13a0:	70 e0       	ldi	r23, 0x00	; 0
+    13a2:	89 e3       	ldi	r24, 0x39	; 57
+    13a4:	90 e0       	ldi	r25, 0x00	; 0
+    13a6:	24 d1       	rcall	.+584    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,78);
+    13a8:	6e e4       	ldi	r22, 0x4E	; 78
+    13aa:	70 e0       	ldi	r23, 0x00	; 0
+    13ac:	89 e3       	ldi	r24, 0x39	; 57
+    13ae:	90 e0       	ldi	r25, 0x00	; 0
+    13b0:	1f d1       	rcall	.+574    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,80);
+    13b2:	60 e5       	ldi	r22, 0x50	; 80
+    13b4:	70 e0       	ldi	r23, 0x00	; 0
+    13b6:	89 e3       	ldi	r24, 0x39	; 57
+    13b8:	90 e0       	ldi	r25, 0x00	; 0
+    13ba:	1a d1       	rcall	.+564    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,82);
+    13bc:	62 e5       	ldi	r22, 0x52	; 82
+    13be:	70 e0       	ldi	r23, 0x00	; 0
+    13c0:	89 e3       	ldi	r24, 0x39	; 57
+    13c2:	90 e0       	ldi	r25, 0x00	; 0
+    13c4:	15 d1       	rcall	.+554    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(57,84);
+    13c6:	64 e5       	ldi	r22, 0x54	; 84
+    13c8:	70 e0       	ldi	r23, 0x00	; 0
+    13ca:	89 e3       	ldi	r24, 0x39	; 57
+    13cc:	90 e0       	ldi	r25, 0x00	; 0
+    13ce:	10 d1       	rcall	.+544    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,78);
+    13d0:	6e e4       	ldi	r22, 0x4E	; 78
+    13d2:	70 e0       	ldi	r23, 0x00	; 0
+    13d4:	88 e3       	ldi	r24, 0x38	; 56
+    13d6:	90 e0       	ldi	r25, 0x00	; 0
+    13d8:	0b d1       	rcall	.+534    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,79);
+    13da:	6f e4       	ldi	r22, 0x4F	; 79
+    13dc:	70 e0       	ldi	r23, 0x00	; 0
+    13de:	88 e3       	ldi	r24, 0x38	; 56
+    13e0:	90 e0       	ldi	r25, 0x00	; 0
+    13e2:	06 d1       	rcall	.+524    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,80);
+    13e4:	60 e5       	ldi	r22, 0x50	; 80
+    13e6:	70 e0       	ldi	r23, 0x00	; 0
+    13e8:	88 e3       	ldi	r24, 0x38	; 56
+    13ea:	90 e0       	ldi	r25, 0x00	; 0
+    13ec:	01 d1       	rcall	.+514    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,82);
+    13ee:	62 e5       	ldi	r22, 0x52	; 82
+    13f0:	70 e0       	ldi	r23, 0x00	; 0
+    13f2:	88 e3       	ldi	r24, 0x38	; 56
+    13f4:	90 e0       	ldi	r25, 0x00	; 0
+    13f6:	fc d0       	rcall	.+504    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,83);
+    13f8:	63 e5       	ldi	r22, 0x53	; 83
+    13fa:	70 e0       	ldi	r23, 0x00	; 0
+    13fc:	88 e3       	ldi	r24, 0x38	; 56
+    13fe:	90 e0       	ldi	r25, 0x00	; 0
+    1400:	f7 d0       	rcall	.+494    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(56,84);
+    1402:	64 e5       	ldi	r22, 0x54	; 84
+    1404:	70 e0       	ldi	r23, 0x00	; 0
+    1406:	88 e3       	ldi	r24, 0x38	; 56
+    1408:	90 e0       	ldi	r25, 0x00	; 0
+    140a:	f2 d0       	rcall	.+484    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(55,79);
+    140c:	6f e4       	ldi	r22, 0x4F	; 79
+    140e:	70 e0       	ldi	r23, 0x00	; 0
+    1410:	87 e3       	ldi	r24, 0x37	; 55
+    1412:	90 e0       	ldi	r25, 0x00	; 0
+    1414:	ed d0       	rcall	.+474    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(55,80);
+    1416:	60 e5       	ldi	r22, 0x50	; 80
+    1418:	70 e0       	ldi	r23, 0x00	; 0
+    141a:	87 e3       	ldi	r24, 0x37	; 55
+    141c:	90 e0       	ldi	r25, 0x00	; 0
+    141e:	e8 d0       	rcall	.+464    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(55,82);
+    1420:	62 e5       	ldi	r22, 0x52	; 82
+    1422:	70 e0       	ldi	r23, 0x00	; 0
+    1424:	87 e3       	ldi	r24, 0x37	; 55
+    1426:	90 e0       	ldi	r25, 0x00	; 0
+    1428:	e3 d0       	rcall	.+454    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(55,83);
+    142a:	63 e5       	ldi	r22, 0x53	; 83
+    142c:	70 e0       	ldi	r23, 0x00	; 0
+    142e:	87 e3       	ldi	r24, 0x37	; 55
+    1430:	90 e0       	ldi	r25, 0x00	; 0
+    1432:	de d0       	rcall	.+444    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(54,79);
+    1434:	6f e4       	ldi	r22, 0x4F	; 79
+    1436:	70 e0       	ldi	r23, 0x00	; 0
+    1438:	86 e3       	ldi	r24, 0x36	; 54
+    143a:	90 e0       	ldi	r25, 0x00	; 0
+    143c:	d9 d0       	rcall	.+434    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(54,80);
+    143e:	60 e5       	ldi	r22, 0x50	; 80
+    1440:	70 e0       	ldi	r23, 0x00	; 0
+    1442:	86 e3       	ldi	r24, 0x36	; 54
+    1444:	90 e0       	ldi	r25, 0x00	; 0
+    1446:	d4 d0       	rcall	.+424    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(54,82);
+    1448:	62 e5       	ldi	r22, 0x52	; 82
+    144a:	70 e0       	ldi	r23, 0x00	; 0
+    144c:	86 e3       	ldi	r24, 0x36	; 54
+    144e:	90 e0       	ldi	r25, 0x00	; 0
+    1450:	cf d0       	rcall	.+414    	; 0x15f0 <GLCD_Dot>
+    1452:	63 e5       	ldi	r22, 0x53	; 83
+	GLCD_Dot(54,83);
+    1454:	70 e0       	ldi	r23, 0x00	; 0
+    1456:	86 e3       	ldi	r24, 0x36	; 54
+    1458:	90 e0       	ldi	r25, 0x00	; 0
+    145a:	ca d0       	rcall	.+404    	; 0x15f0 <GLCD_Dot>
+    145c:	6f e4       	ldi	r22, 0x4F	; 79
+    145e:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(53,79);
+    1460:	85 e3       	ldi	r24, 0x35	; 53
+    1462:	90 e0       	ldi	r25, 0x00	; 0
+    1464:	c5 d0       	rcall	.+394    	; 0x15f0 <GLCD_Dot>
+    1466:	60 e5       	ldi	r22, 0x50	; 80
+    1468:	70 e0       	ldi	r23, 0x00	; 0
+    146a:	85 e3       	ldi	r24, 0x35	; 53
+	GLCD_Dot(53,80);
+    146c:	90 e0       	ldi	r25, 0x00	; 0
+    146e:	c0 d0       	rcall	.+384    	; 0x15f0 <GLCD_Dot>
+    1470:	62 e5       	ldi	r22, 0x52	; 82
+    1472:	70 e0       	ldi	r23, 0x00	; 0
+    1474:	85 e3       	ldi	r24, 0x35	; 53
+    1476:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(53,82);
+    1478:	bb d0       	rcall	.+374    	; 0x15f0 <GLCD_Dot>
+    147a:	63 e5       	ldi	r22, 0x53	; 83
+    147c:	70 e0       	ldi	r23, 0x00	; 0
+    147e:	85 e3       	ldi	r24, 0x35	; 53
+    1480:	90 e0       	ldi	r25, 0x00	; 0
+    1482:	b6 d0       	rcall	.+364    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(53,83);
+    1484:	6f e4       	ldi	r22, 0x4F	; 79
+    1486:	70 e0       	ldi	r23, 0x00	; 0
+    1488:	84 e3       	ldi	r24, 0x34	; 52
+    148a:	90 e0       	ldi	r25, 0x00	; 0
+    148c:	b1 d0       	rcall	.+354    	; 0x15f0 <GLCD_Dot>
+    148e:	60 e5       	ldi	r22, 0x50	; 80
+	GLCD_Dot(52,79);
+    1490:	70 e0       	ldi	r23, 0x00	; 0
+    1492:	84 e3       	ldi	r24, 0x34	; 52
+    1494:	90 e0       	ldi	r25, 0x00	; 0
+    1496:	ac d0       	rcall	.+344    	; 0x15f0 <GLCD_Dot>
+    1498:	62 e5       	ldi	r22, 0x52	; 82
+    149a:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(52,80);
+    149c:	84 e3       	ldi	r24, 0x34	; 52
+    149e:	90 e0       	ldi	r25, 0x00	; 0
+    14a0:	a7 d0       	rcall	.+334    	; 0x15f0 <GLCD_Dot>
+    14a2:	63 e5       	ldi	r22, 0x53	; 83
+    14a4:	70 e0       	ldi	r23, 0x00	; 0
+    14a6:	84 e3       	ldi	r24, 0x34	; 52
+	GLCD_Dot(52,82);
+    14a8:	90 e0       	ldi	r25, 0x00	; 0
+    14aa:	a2 d0       	rcall	.+324    	; 0x15f0 <GLCD_Dot>
+    14ac:	6f e4       	ldi	r22, 0x4F	; 79
+    14ae:	70 e0       	ldi	r23, 0x00	; 0
+    14b0:	83 e3       	ldi	r24, 0x33	; 51
+    14b2:	90 e0       	ldi	r25, 0x00	; 0
+	GLCD_Dot(52,83);
+    14b4:	9d d0       	rcall	.+314    	; 0x15f0 <GLCD_Dot>
+    14b6:	60 e5       	ldi	r22, 0x50	; 80
+    14b8:	70 e0       	ldi	r23, 0x00	; 0
+    14ba:	83 e3       	ldi	r24, 0x33	; 51
+    14bc:	90 e0       	ldi	r25, 0x00	; 0
+    14be:	98 d0       	rcall	.+304    	; 0x15f0 <GLCD_Dot>
+	GLCD_Dot(51,79);
+    14c0:	61 e5       	ldi	r22, 0x51	; 81
+    14c2:	70 e0       	ldi	r23, 0x00	; 0
+    14c4:	83 e3       	ldi	r24, 0x33	; 51
+    14c6:	90 e0       	ldi	r25, 0x00	; 0
+    14c8:	93 d0       	rcall	.+294    	; 0x15f0 <GLCD_Dot>
+    14ca:	62 e5       	ldi	r22, 0x52	; 82
+	GLCD_Dot(51,80);
+    14cc:	70 e0       	ldi	r23, 0x00	; 0
+    14ce:	83 e3       	ldi	r24, 0x33	; 51
+    14d0:	90 e0       	ldi	r25, 0x00	; 0
+    14d2:	8e d0       	rcall	.+284    	; 0x15f0 <GLCD_Dot>
+    14d4:	63 e5       	ldi	r22, 0x53	; 83
+    14d6:	70 e0       	ldi	r23, 0x00	; 0
+	GLCD_Dot(51,81);
+    14d8:	83 e3       	ldi	r24, 0x33	; 51
+    14da:	90 e0       	ldi	r25, 0x00	; 0
+    14dc:	89 d0       	rcall	.+274    	; 0x15f0 <GLCD_Dot>
+    14de:	61 e5       	ldi	r22, 0x51	; 81
+    14e0:	70 e0       	ldi	r23, 0x00	; 0
+    14e2:	82 e3       	ldi	r24, 0x32	; 50
+	GLCD_Dot(51,82);
+    14e4:	90 e0       	ldi	r25, 0x00	; 0
+    14e6:	84 c0       	rjmp	.+264    	; 0x15f0 <GLCD_Dot>
+    14e8:	08 95       	ret
+
+000014ea <cmndl>:
+    14ea:	1d 9a       	sbi	0x03, 5	; 3
+    14ec:	91 e3       	ldi	r25, 0x31	; 49
+    14ee:	9a 95       	dec	r25
+	GLCD_Dot(51,83);
+    14f0:	f1 f7       	brne	.-4      	; 0x14ee <cmndl+0x4>
+    14f2:	00 00       	nop
+    14f4:	1c 98       	cbi	0x03, 4	; 3
+    14f6:	1e 98       	cbi	0x03, 6	; 3
+    14f8:	1f 9a       	sbi	0x03, 7	; 3
+    14fa:	8b bb       	out	0x1b, r24	; 27
+	GLCD_Dot(50,81);
+    14fc:	81 e3       	ldi	r24, 0x31	; 49
+    14fe:	8a 95       	dec	r24
+    1500:	f1 f7       	brne	.-4      	; 0x14fe <cmndl+0x14>
+    1502:	00 00       	nop
+    1504:	1d 98       	cbi	0x03, 5	; 3
+    1506:	08 95       	ret
+
+00001508 <cmndr>:
+    1508:	1d 9a       	sbi	0x03, 5	; 3
+		if(i != 0x00) //ÎßåÏïΩ 0Ïù¥ ÏïÑÎãåÏÉÅÌÉúÏóêÏÑú ÎπÑÌä∏Î•º Î∞òÏ†ÑÏãúÌÇ§Î©¥ ÎπàÍ≥µÍ∞ÑÏóê ÎåÄÌï¥ ÏßÄÏö∞Í∏∞Î•º ÏãúÎèÑÌïúÎã§Î©¥ Í≤ÄÏùÄÏÉâÎèÑÌä∏Î°ú ÎÇòÌÉÄÎÇ† Í≤ÉÏù¥Îã§.
+		ScreenBuffer[x][y] &= ~i;    // OR old data with new data
+		GLCD_Axis_xy(x, y);          // draw dot on GLCD screen
+		if(y <= 63) { datal(ScreenBuffer[x][y]);  }
+		else        { datar(ScreenBuffer[x][y]);  }
+	}
+    150a:	91 e3       	ldi	r25, 0x31	; 49
+    150c:	9a 95       	dec	r25
+    150e:	f1 f7       	brne	.-4      	; 0x150c <cmndr+0x4>
+    1510:	00 00       	nop
+    1512:	1c 98       	cbi	0x03, 4	; 3
+    1514:	1e 9a       	sbi	0x03, 6	; 3
+    1516:	1f 98       	cbi	0x03, 7	; 3
+    1518:	8b bb       	out	0x1b, r24	; 27
+    151a:	81 e3       	ldi	r24, 0x31	; 49
+    151c:	8a 95       	dec	r24
+    151e:	f1 f7       	brne	.-4      	; 0x151c <cmndr+0x14>
+    1520:	00 00       	nop
+    1522:	1d 98       	cbi	0x03, 5	; 3
+    1524:	08 95       	ret
+
+00001526 <cmnda>:
+    1526:	1d 9a       	sbi	0x03, 5	; 3
+    1528:	91 e3       	ldi	r25, 0x31	; 49
+    152a:	9a 95       	dec	r25
+    152c:	f1 f7       	brne	.-4      	; 0x152a <cmnda+0x4>
+    152e:	00 00       	nop
+    1530:	1c 98       	cbi	0x03, 4	; 3
+    1532:	1e 9a       	sbi	0x03, 6	; 3
+    1534:	1f 9a       	sbi	0x03, 7	; 3
+    1536:	8b bb       	out	0x1b, r24	; 27
+    1538:	81 e3       	ldi	r24, 0x31	; 49
+    153a:	8a 95       	dec	r24
+    153c:	f1 f7       	brne	.-4      	; 0x153a <cmnda+0x14>
+    153e:	00 00       	nop
+    1540:	1d 98       	cbi	0x03, 5	; 3
+    1542:	08 95       	ret
+
+00001544 <datal>:
+    1544:	1d 9a       	sbi	0x03, 5	; 3
+    1546:	91 e3       	ldi	r25, 0x31	; 49
+    1548:	9a 95       	dec	r25
+    154a:	f1 f7       	brne	.-4      	; 0x1548 <datal+0x4>
+    154c:	00 00       	nop
+    154e:	1c 9a       	sbi	0x03, 4	; 3
+    1550:	1e 98       	cbi	0x03, 6	; 3
+    1552:	1f 9a       	sbi	0x03, 7	; 3
+    1554:	8b bb       	out	0x1b, r24	; 27
+    1556:	81 e3       	ldi	r24, 0x31	; 49
+    1558:	8a 95       	dec	r24
+    155a:	f1 f7       	brne	.-4      	; 0x1558 <datal+0x14>
+    155c:	00 00       	nop
+    155e:	1d 98       	cbi	0x03, 5	; 3
+    1560:	08 95       	ret
+
+00001562 <datar>:
+    1562:	1d 9a       	sbi	0x03, 5	; 3
+    1564:	91 e3       	ldi	r25, 0x31	; 49
+    1566:	9a 95       	dec	r25
+    1568:	f1 f7       	brne	.-4      	; 0x1566 <datar+0x4>
+    156a:	00 00       	nop
+    156c:	1c 9a       	sbi	0x03, 4	; 3
+    156e:	1e 9a       	sbi	0x03, 6	; 3
+    1570:	1f 98       	cbi	0x03, 7	; 3
+    1572:	8b bb       	out	0x1b, r24	; 27
+    1574:	81 e3       	ldi	r24, 0x31	; 49
+    1576:	8a 95       	dec	r24
+    1578:	f1 f7       	brne	.-4      	; 0x1576 <datar+0x14>
+    157a:	00 00       	nop
+    157c:	1d 98       	cbi	0x03, 5	; 3
+    157e:	08 95       	ret
+
+00001580 <dataa>:
+    1580:	1d 9a       	sbi	0x03, 5	; 3
+    1582:	91 e3       	ldi	r25, 0x31	; 49
+    1584:	9a 95       	dec	r25
+    1586:	f1 f7       	brne	.-4      	; 0x1584 <dataa+0x4>
+    1588:	00 00       	nop
+    158a:	1c 9a       	sbi	0x03, 4	; 3
+    158c:	1e 9a       	sbi	0x03, 6	; 3
+    158e:	1f 9a       	sbi	0x03, 7	; 3
+    1590:	8b bb       	out	0x1b, r24	; 27
+    1592:	81 e3       	ldi	r24, 0x31	; 49
+    1594:	8a 95       	dec	r24
+    1596:	f1 f7       	brne	.-4      	; 0x1594 <dataa+0x14>
+    1598:	00 00       	nop
+    159a:	1d 98       	cbi	0x03, 5	; 3
+    159c:	08 95       	ret
+
+0000159e <lcd_clear>:
+    159e:	cf 93       	push	r28
+    15a0:	df 93       	push	r29
+    15a2:	d8 eb       	ldi	r29, 0xB8	; 184
+    15a4:	8d 2f       	mov	r24, r29
+    15a6:	bf df       	rcall	.-130    	; 0x1526 <cmnda>
+    15a8:	80 e4       	ldi	r24, 0x40	; 64
+    15aa:	bd df       	rcall	.-134    	; 0x1526 <cmnda>
+    15ac:	c0 e4       	ldi	r28, 0x40	; 64
+    15ae:	80 e0       	ldi	r24, 0x00	; 0
+    15b0:	e7 df       	rcall	.-50     	; 0x1580 <dataa>
+    15b2:	c1 50       	subi	r28, 0x01	; 1
+    15b4:	e1 f7       	brne	.-8      	; 0x15ae <lcd_clear+0x10>
+    15b6:	df 5f       	subi	r29, 0xFF	; 255
+    15b8:	d0 3c       	cpi	r29, 0xC0	; 192
+    15ba:	a1 f7       	brne	.-24     	; 0x15a4 <lcd_clear+0x6>
+    15bc:	df 91       	pop	r29
+    15be:	cf 91       	pop	r28
+    15c0:	08 95       	ret
+
+000015c2 <lcd_init>:
+    15c2:	8f e3       	ldi	r24, 0x3F	; 63
+    15c4:	b0 df       	rcall	.-160    	; 0x1526 <cmnda>
+    15c6:	80 ec       	ldi	r24, 0xC0	; 192
+    15c8:	ae df       	rcall	.-164    	; 0x1526 <cmnda>
+    15ca:	88 eb       	ldi	r24, 0xB8	; 184
+    15cc:	ac df       	rcall	.-168    	; 0x1526 <cmnda>
+    15ce:	80 e4       	ldi	r24, 0x40	; 64
+    15d0:	aa cf       	rjmp	.-172    	; 0x1526 <cmnda>
+    15d2:	08 95       	ret
+
+000015d4 <GLCD_Axis_xy>:
+    15d4:	cf 93       	push	r28
+    15d6:	c6 2f       	mov	r28, r22
+    15d8:	88 54       	subi	r24, 0x48	; 72
+    15da:	a5 df       	rcall	.-182    	; 0x1526 <cmnda>
+    15dc:	c0 34       	cpi	r28, 0x40	; 64
+    15de:	20 f4       	brcc	.+8      	; 0x15e8 <GLCD_Axis_xy+0x14>
+    15e0:	80 e4       	ldi	r24, 0x40	; 64
+    15e2:	8c 0f       	add	r24, r28
+    15e4:	82 df       	rcall	.-252    	; 0x14ea <cmndl>
+    15e6:	02 c0       	rjmp	.+4      	; 0x15ec <GLCD_Axis_xy+0x18>
+    15e8:	8c 2f       	mov	r24, r28
+    15ea:	8e df       	rcall	.-228    	; 0x1508 <cmndr>
+    15ec:	cf 91       	pop	r28
+    15ee:	08 95       	ret
+
+000015f0 <GLCD_Dot>:
+    15f0:	ef 92       	push	r14
+    15f2:	ff 92       	push	r15
+    15f4:	0f 93       	push	r16
+    15f6:	1f 93       	push	r17
+    15f8:	cf 93       	push	r28
+    15fa:	80 34       	cpi	r24, 0x40	; 64
+    15fc:	08 f0       	brcs	.+2      	; 0x1600 <GLCD_Dot+0x10>
+    15fe:	54 c0       	rjmp	.+168    	; 0x16a8 <GLCD_Dot+0xb8>
+    1600:	66 23       	and	r22, r22
+    1602:	0c f4       	brge	.+2      	; 0x1606 <GLCD_Dot+0x16>
+    1604:	51 c0       	rjmp	.+162    	; 0x16a8 <GLCD_Dot+0xb8>
+    1606:	28 2f       	mov	r18, r24
+    1608:	26 95       	lsr	r18
+    160a:	26 95       	lsr	r18
+    160c:	26 95       	lsr	r18
+    160e:	98 2f       	mov	r25, r24
+    1610:	97 70       	andi	r25, 0x07	; 7
+    1612:	71 f0       	breq	.+28     	; 0x1630 <GLCD_Dot+0x40>
+    1614:	91 30       	cpi	r25, 0x01	; 1
+    1616:	71 f0       	breq	.+28     	; 0x1634 <GLCD_Dot+0x44>
+    1618:	92 30       	cpi	r25, 0x02	; 2
+    161a:	71 f0       	breq	.+28     	; 0x1638 <GLCD_Dot+0x48>
+    161c:	93 30       	cpi	r25, 0x03	; 3
+    161e:	71 f0       	breq	.+28     	; 0x163c <GLCD_Dot+0x4c>
+    1620:	94 30       	cpi	r25, 0x04	; 4
+    1622:	71 f0       	breq	.+28     	; 0x1640 <GLCD_Dot+0x50>
+    1624:	95 30       	cpi	r25, 0x05	; 5
+    1626:	71 f0       	breq	.+28     	; 0x1644 <GLCD_Dot+0x54>
+    1628:	96 30       	cpi	r25, 0x06	; 6
+    162a:	71 f0       	breq	.+28     	; 0x1648 <GLCD_Dot+0x58>
+    162c:	90 e8       	ldi	r25, 0x80	; 128
+    162e:	0d c0       	rjmp	.+26     	; 0x164a <GLCD_Dot+0x5a>
+    1630:	91 e0       	ldi	r25, 0x01	; 1
+    1632:	0b c0       	rjmp	.+22     	; 0x164a <GLCD_Dot+0x5a>
+    1634:	92 e0       	ldi	r25, 0x02	; 2
+    1636:	09 c0       	rjmp	.+18     	; 0x164a <GLCD_Dot+0x5a>
+    1638:	94 e0       	ldi	r25, 0x04	; 4
+    163a:	07 c0       	rjmp	.+14     	; 0x164a <GLCD_Dot+0x5a>
+    163c:	98 e0       	ldi	r25, 0x08	; 8
+    163e:	05 c0       	rjmp	.+10     	; 0x164a <GLCD_Dot+0x5a>
+    1640:	90 e1       	ldi	r25, 0x10	; 16
+    1642:	03 c0       	rjmp	.+6      	; 0x164a <GLCD_Dot+0x5a>
+    1644:	90 e2       	ldi	r25, 0x20	; 32
+    1646:	01 c0       	rjmp	.+2      	; 0x164a <GLCD_Dot+0x5a>
+    1648:	90 e4       	ldi	r25, 0x40	; 64
+    164a:	c6 2f       	mov	r28, r22
+    164c:	02 2f       	mov	r16, r18
+    164e:	10 e0       	ldi	r17, 0x00	; 0
+    1650:	e6 2e       	mov	r14, r22
+    1652:	f1 2c       	mov	r15, r1
+    1654:	f8 01       	movw	r30, r16
+    1656:	f6 95       	lsr	r31
+    1658:	fe 2f       	mov	r31, r30
+    165a:	ee 27       	eor	r30, r30
+    165c:	f7 95       	ror	r31
+    165e:	e7 95       	ror	r30
+    1660:	ed 5f       	subi	r30, 0xFD	; 253
+    1662:	fe 4f       	sbci	r31, 0xFE	; 254
+    1664:	ee 0d       	add	r30, r14
+    1666:	ff 1d       	adc	r31, r15
+    1668:	80 81       	ld	r24, Z
+    166a:	98 2b       	or	r25, r24
+    166c:	90 83       	st	Z, r25
+    166e:	82 2f       	mov	r24, r18
+    1670:	b1 df       	rcall	.-158    	; 0x15d4 <GLCD_Axis_xy>
+    1672:	c0 34       	cpi	r28, 0x40	; 64
+    1674:	68 f4       	brcc	.+26     	; 0x1690 <GLCD_Dot+0xa0>
+    1676:	16 95       	lsr	r17
+    1678:	10 2f       	mov	r17, r16
+    167a:	00 27       	eor	r16, r16
+    167c:	17 95       	ror	r17
+    167e:	07 95       	ror	r16
+    1680:	0d 5f       	subi	r16, 0xFD	; 253
+    1682:	1e 4f       	sbci	r17, 0xFE	; 254
+    1684:	f8 01       	movw	r30, r16
+    1686:	ee 0d       	add	r30, r14
+    1688:	ff 1d       	adc	r31, r15
+    168a:	80 81       	ld	r24, Z
+    168c:	5b df       	rcall	.-330    	; 0x1544 <datal>
+    168e:	0c c0       	rjmp	.+24     	; 0x16a8 <GLCD_Dot+0xb8>
+    1690:	16 95       	lsr	r17
+    1692:	10 2f       	mov	r17, r16
+    1694:	00 27       	eor	r16, r16
+    1696:	17 95       	ror	r17
+    1698:	07 95       	ror	r16
+    169a:	0d 5f       	subi	r16, 0xFD	; 253
+    169c:	1e 4f       	sbci	r17, 0xFE	; 254
+    169e:	f8 01       	movw	r30, r16
+    16a0:	ee 0d       	add	r30, r14
+    16a2:	ff 1d       	adc	r31, r15
+    16a4:	80 81       	ld	r24, Z
+    16a6:	5d df       	rcall	.-326    	; 0x1562 <datar>
+    16a8:	cf 91       	pop	r28
+    16aa:	1f 91       	pop	r17
+    16ac:	0f 91       	pop	r16
+    16ae:	ff 90       	pop	r15
+    16b0:	ef 90       	pop	r14
+    16b2:	08 95       	ret
+
+000016b4 <ScreenBuffer_clear>:
+
+
+	void ScreenBuffer_clear(void)
+	{
+    16b4:	e3 e0       	ldi	r30, 0x03	; 3
+    16b6:	f1 e0       	ldi	r31, 0x01	; 1
+    16b8:	23 e0       	ldi	r18, 0x03	; 3
+    16ba:	35 e0       	ldi	r19, 0x05	; 5
+    16bc:	08 c0       	rjmp	.+16     	; 0x16ce <ScreenBuffer_clear+0x1a>
+		
+		for(i=0; i<8; i++)
+		{
+			for(j=0; j < 128; j++)
+			{
+				ScreenBuffer[i][j] = 0x00;
+    16be:	11 92       	st	Z+, r1
+	{
+		unsigned char i, j;
+		
+		for(i=0; i<8; i++)
+		{
+			for(j=0; j < 128; j++)
+    16c0:	e8 17       	cp	r30, r24
+    16c2:	f9 07       	cpc	r31, r25
+    16c4:	e1 f7       	brne	.-8      	; 0x16be <ScreenBuffer_clear+0xa>
+    16c6:	fc 01       	movw	r30, r24
+
+	void ScreenBuffer_clear(void)
+	{
+		unsigned char i, j;
+		
+		for(i=0; i<8; i++)
+    16c8:	82 17       	cp	r24, r18
+    16ca:	93 07       	cpc	r25, r19
+    16cc:	21 f0       	breq	.+8      	; 0x16d6 <ScreenBuffer_clear+0x22>
+    16ce:	cf 01       	movw	r24, r30
+    16d0:	80 58       	subi	r24, 0x80	; 128
+    16d2:	9f 4f       	sbci	r25, 0xFF	; 255
+    16d4:	f4 cf       	rjmp	.-24     	; 0x16be <ScreenBuffer_clear+0xa>
+    16d6:	08 95       	ret
+
+000016d8 <_exit>:
+    16d8:	f8 94       	cli
+
+000016da <__stop_program>:
+    16da:	ff cf       	rjmp	.-2      	; 0x16da <__stop_program>
